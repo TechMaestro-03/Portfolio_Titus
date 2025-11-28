@@ -1684,4 +1684,507 @@ footer .copyright {
     z-index: 99999;
     transition: transform 0.12s ease, background-color 0.12s;
   }
+  /* ================================
+   RESPONSIVE DESIGN ADDITIONS
+   ================================ */
+
+/* === EXTRA SMALL DEVICES (Phones, 320px and up) === */
+@media (max-width: 480px) {
+  /* Global adjustments */
+  body {
+      font-size: 13px;
+  }
   
+  /* Header adjustments */
+  .nav-container {
+      padding: 12px 15px;
+  }
+  
+  .logo {
+      font-size: 1.1rem;
+  }
+  
+  .logo i {
+      font-size: 18px;
+  }
+  
+  /* Hero section */
+  .hero {
+      padding: 80px 15px 60px;
+      gap: 30px;
+  }
+  
+  .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 6px;
+  }
+  
+  .hero h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+  }
+  
+  .hero p {
+      font-size: 0.95rem;
+  }
+  
+  .hero-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+  
+  .btn {
+      padding: 12px 20px;
+      font-size: 14px;
+      text-align: center;
+      justify-content: center;
+  }
+  
+  /* Section titles */
+  .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+  }
+  
+  /* Sections padding */
+  section {
+      padding: 40px 15px;
+  }
+  
+  /* About section */
+  .about-content {
+      gap: 25px;
+  }
+  
+  .about-text h2 {
+      font-size: 1.4rem;
+  }
+  
+  /* Tech stack */
+  .tech-stack-container {
+      margin: 60px auto;
+  }
+  
+  .tech-stack-item {
+      min-width: 80px;
+      padding: 12px;
+  }
+  
+  .tech-stack-item i {
+      font-size: 24px;
+  }
+  
+  .tech-stack-item span {
+      font-size: 12px;
+  }
+  
+  /* Stats */
+  .stats-container {
+      gap: 30px;
+      margin-top: 30px;
+  }
+  
+  .stat-item {
+      font-size: 1.8rem;
+      padding: 8px 15px;
+  }
+  
+  /* Quick info */
+  .quick-info-wrapper {
+      right: 15px;
+      bottom: 15px;
+  }
+  
+  .quick-info-icon {
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+  }
+  
+  .quick-info-aside {
+      width: 260px;
+      padding: 18px;
+  }
+  
+  /* Projects grid */
+  .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+  
+  .project-card {
+      padding: 16px;
+      gap: 15px;
+  }
+  
+  .project-img img {
+      height: 160px;
+  }
+  
+  .project-actions {
+      flex-direction: column;
+      gap: 8px;
+  }
+  
+  /* Skills & Services */
+  .skills-grid,
+  .services-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+  
+  .skill-category,
+  .service-card {
+      padding: 18px;
+  }
+  
+  /* Timeline adjustments */
+  .timeline-item {
+      padding: 18px 20px;
+      margin: 25px 0;
+  }
+  
+  .timeline-item h3 {
+      font-size: 0.95rem;
+  }
+  
+  .timeline-item p {
+      font-size: 0.85rem;
+  }
+  
+  /* Testimonials */
+  .testimonial-card {
+      min-width: 280px;
+      padding: 20px;
+  }
+  
+  /* Contact form */
+  .contact-info,
+  .contact-form {
+      padding: 20px;
+  }
+  
+  .form-control {
+      padding: 10px 12px;
+  }
+  
+  /* Footer */
+  footer {
+      padding: 30px 15px;
+  }
+  
+  .social-links {
+      gap: 15px;
+  }
+  
+  .social-link {
+      font-size: 18px;
+  }
+}
+
+/* === SMALL DEVICES (Phones, 481px to 767px) === */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero h1 {
+      font-size: 2.2rem;
+  }
+  
+  .hero h2 {
+      font-size: 1.2rem;
+  }
+  
+  .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .skills-grid,
+  .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* === MEDIUM DEVICES (Tablets, 768px to 1023px) === */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-container {
+      padding: 14px 20px;
+  }
+  
+  .hero {
+      padding: 100px 20px 80px;
+  }
+  
+  .hero h1 {
+      font-size: 2.8rem;
+  }
+  
+  .hero h2 {
+      font-size: 1.4rem;
+  }
+  
+  .projects-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+  }
+  
+  .skills-grid,
+  .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+  }
+  
+  .contact-grid {
+      gap: 25px;
+  }
+}
+
+/* === LARGE DEVICES (Desktops, 1024px to 1279px) === */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+      max-width: 980px;
+  }
+  
+  .nav-container {
+      max-width: 980px;
+  }
+  
+  .hero {
+      max-width: 980px;
+  }
+}
+
+/* === EXTRA LARGE DEVICES (Large desktops, 1280px and up) === */
+@media (min-width: 1280px) {
+  .container {
+      max-width: 1200px;
+  }
+  
+  .nav-container {
+      max-width: 1200px;
+  }
+  
+  .hero {
+      max-width: 1200px;
+  }
+}
+
+/* === TOUCH DEVICE OPTIMIZATIONS === */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects for touch devices */
+  .skill-category:hover,
+  .service-card:hover,
+  .project-card:hover,
+  .testimonial-card:hover,
+  .contact-info:hover,
+  .contact-form:hover {
+      transform: none;
+  }
+  
+  .skill-category:hover::before {
+      left: -100%;
+  }
+  
+  /* Increase tap target sizes */
+  .nav-links a,
+  .btn,
+  .resume-btn,
+  .project-content .btn,
+  .project-content .resume-btn {
+      min-height: 44px;
+      min-width: 44px;
+  }
+  
+  .quick-info-icon {
+      width: 54px;
+      height: 54px;
+  }
+}
+
+/* === LANDSCAPE ORIENTATION OPTIMIZATIONS === */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+      min-height: auto;
+      padding: 80px 20px 60px;
+  }
+  
+  .search-container {
+      padding: 20px 0;
+  }
+  
+  .modal-card {
+      max-height: 85vh;
+      margin: 20px;
+  }
+}
+
+/* === HIGH DPI SCREENS === */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo i {
+      -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+/* === PRINT STYLES === */
+@media print {
+  .quick-info-wrapper,
+  .back-to-top,
+  .cursor,
+  #progress-bar,
+  .menu-toggle,
+  .search-toggle {
+      display: none !important;
+  }
+  
+  body {
+      background: white !important;
+      color: black !important;
+      font-size: 12pt;
+  }
+  
+  .hero,
+  section {
+      padding: 20px 0;
+      break-inside: avoid;
+  }
+  
+  .project-card,
+  .skill-category,
+  .service-card {
+      break-inside: avoid;
+      box-shadow: none;
+      border: 1px solid #ccc;
+  }
+}
+
+/* === ACCESSIBILITY: REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+  }
+  
+  .tech-stack-track {
+      animation: none !important;
+  }
+  
+  .logo i {
+      animation: none !important;
+  }
+}
+
+/* === ACCESSIBILITY: HIGH CONTRAST === */
+@media (prefers-contrast: high) {
+  :root {
+      --accent: #000000;
+      --muted: #333333;
+      --glass-border: #000000;
+  }
+  
+  .skill-bar > span {
+      background: #000000;
+  }
+  
+  .project-card,
+  .skill-category,
+  .service-card {
+      border-width: 2px;
+  }
+}
+
+/* === DARK MODE AUTO DETECTION FALLBACK === */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+      --bg: var(--light-bg);
+      --card: rgba(255, 255, 255, 0.05);
+      --glass: rgba(255, 255, 255, 0.08);
+      --accent: #c26f46;
+      --muted: #a0a0a0;
+      --glass-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* === MOBILE MENU ENHANCEMENTS === */
+@media (max-width: 900px) {
+  .nav-links {
+      backdrop-filter: blur(20px);
+      background: rgba(15, 23, 36, 0.95);
+  }
+  
+  .nav-links a {
+      padding: 15px 20px;
+      width: 100%;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-links a:last-child {
+      border-bottom: none;
+  }
+  
+  .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* === FONT SIZE ADJUSTMENTS FOR MOBILE === */
+@media (max-width: 767px) {
+  html {
+      font-size: 14px;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.1rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.9rem; }
+}
+
+/* === SAFARI SPECIFIC FIXES === */
+@supports (-webkit-touch-callout: none) {
+  .hero {
+      min-height: -webkit-fill-available;
+  }
+  
+  .search-container {
+      height: -webkit-fill-available;
+  }
+}
+
+/* === FIREFOX SCROLLBAR FIX === */
+@-moz-document url-prefix() {
+  .modal-card {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* === EMERGENCY BREAKPOINT FOR VERY SMALL SCREENS === */
+@media (max-width: 320px) {
+  .container {
+      padding: 0 10px;
+  }
+  
+  section {
+      padding: 30px 10px;
+  }
+  
+  .hero {
+      padding: 60px 10px 40px;
+  }
+  
+  .hero h1 {
+      font-size: 1.8rem;
+  }
+  
+  .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+  }
+  
+  .project-card {
+      padding: 12px;
+  }
+}
