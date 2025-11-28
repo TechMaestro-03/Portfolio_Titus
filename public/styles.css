@@ -1216,7 +1216,7 @@
 @media (max-width: 420px) {
   .timeline-item {
     width: 95%;                 /* Very narrow */
-    min-height: 300px;          /* ✔ Much taller */
+    min-height: 200px;          /* ✔ Much taller */
     padding: 34px 24px;
   }
 }
