@@ -528,7 +528,24 @@
   <!-- Back to top -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
- 
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card" role="document">
+      <button class="modal-close" id="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div id="modal-inner"></div>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+  
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+  
+
   <!-- Libraries -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>

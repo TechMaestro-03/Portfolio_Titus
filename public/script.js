@@ -105,44 +105,57 @@ function initQuickInfo() {
 
 // Call the initializer
 initQuickInfo();
-
-
-
 // 5. Mobile Menu
 function initMobileMenu() {
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
-    
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('open');
-            menuToggle.classList.toggle('active');
-            
-            // Toggle aria-expanded for accessibility
-            const isExpanded = navLinks.classList.contains('open');
-            menuToggle.setAttribute('aria-expanded', isExpanded);
+
+    if (!menuToggle || !navLinks) return;
+
+    // Toggle menu open/close
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation(); // prevent document click from immediately closing
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.classList.toggle('active', isOpen);
+
+        // Update aria-expanded for accessibility
+        menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when clicking on any link
+    navLinks.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', function() {
+            navLinks.classList.remove('open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
         });
-        
-        // Close menu when clicking on a link
-        const navAnchors = navLinks.querySelectorAll('a');
-        navAnchors.forEach(anchor => {
-            anchor.addEventListener('click', function() {
-                navLinks.classList.remove('open');
-                menuToggle.classList.remove('active');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-                navLinks.classList.remove('open');
-                menuToggle.classList.remove('active');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-    }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+            navLinks.classList.remove('open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Optional: Close menu on Escape key press
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            navLinks.classList.remove('open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
 }
+
+// Initialize mobile menu
+initMobileMenu();
+
+
+
+
 
 // 6. Tech Stack Carousel
 function initTechCarousel() {
