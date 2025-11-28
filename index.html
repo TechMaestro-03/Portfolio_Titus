@@ -23,35 +23,101 @@
   <!-- Progress bar -->
   <div id="progress-bar" aria-hidden="true"></div>
 
-  <!-- Preloader -->
-  <div id="loader" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#0b1120;z-index:100000">
-    <div class="terminal-loader">
-      <div class="text">System.initialize(<span style="color:#60a5fa">'Portfolio'</span>)</div>
-    </div>
-  
-    <style>
-      .terminal-loader {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 1.5rem;
-        color: #e2e8f0;
-        background: #1e293b;
-        padding: 20px 40px;
-        border-radius: 8px;
-        border: 1px solid #334155;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      }
-      .text::after {
-        content: '_';
-        animation: blink 1s step-end infinite;
-        color: #60a5fa;
-      }
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-    </style>
-  </div>
 
+  <!-- Preloader -->
+<div id="loader">
+  <div class="terminal-loader">
+    <div class="text">
+      System.initialize(<span class="blue">'Portfolio'</span>)
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Loader container */
+  #loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1120;
+    z-index: 100000;
+    padding: 20px; /* prevents overflow on tiny screens */
+  }
+
+  /* Loader box */
+  .terminal-loader {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.6rem;
+    color: #e2e8f0;
+    background: #1e293b;
+    padding: 22px 42px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    max-width: 95%;
+    word-wrap: break-word; /* ensures text does not overflow */
+  }
+
+  .blue {
+    color: #60a5fa;
+  }
+
+  /* Blinking cursor */
+  .text::after {
+    content: "_";
+    animation: blink 1s step-end infinite;
+    color: #60a5fa;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* ===========================
+         RESPONSIVE FIXES
+     Timeline-matching style
+  =========================== */
+
+  /* Tablets */
+  @media (max-width: 850px) {
+    .terminal-loader {
+      font-size: 1.4rem;
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+  }
+
+  /* Phones */
+  @media (max-width: 600px) {
+    .terminal-loader {
+      font-size: 1.2rem;
+      padding: 18px 26px;
+    }
+  }
+
+  /* Very small phones */
+  @media (max-width: 420px) {
+    .terminal-loader {
+      font-size: 1rem;
+      padding: 16px 20px;
+    }
+  }
+
+  /* Micro devices (foldables, small old phones) */
+  @media (max-width: 330px) {
+    .terminal-loader {
+      font-size: 0.9rem;
+      padding: 14px 16px;
+    }
+  }
+</style>
+
+
+  
   <!-- Search Bar -->
   <div id="search-container" class="search-container">
     <div class="search-box">
@@ -352,9 +418,9 @@
             <h3>Freelance Developer</h3>
             <p>Deployed full-stack apps with user-focused design. Used Firebase, Tailwind, and clean coding standards.</p>
           </div>
-          
+
           <div class="timeline-item" data-aos="fade-left">
-            <div class="timeline-date">2024</div>
+            <div class="timeline-date">April 2024 - September 2024</div>
             <h3>ICT Attaché</h3>
             <p>
               Assisted in network troubleshooting, system maintenance, user support, and software configuration.  
@@ -408,17 +474,17 @@
         <div class="testimonials-container" id="testimonial-track" aria-live="polite">
           <div class="testimonial-card" data-aos="fade-right">
             <p>"Titus delivered an exceptional web application for our farm management system."</p>
-            <div style="display:flex;align-items:center;gap:10px;margin-top:8px"><div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center"><i class="fas fa-user"></i></div><div><strong>John Kariuki</strong><br><small style="color:var(--muted)">Farm Manager</small></div></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:8px"><div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center"><i class="fas fa-user"></i></div><div><strong>John Kariuki</strong><br><small style="color:var(--accent)">Farm Manager</small></div></div>
           </div>
 
           <div class="testimonial-card" data-aos="fade-right" data-aos-delay="60">
             <p>"Working with Titus was a great experience. He understood our requirements perfectly."</p>
-            <div style="display:flex;align-items:center;gap:10px;margin-top:8px"><div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center"><i class="fas fa-user"></i></div><div><strong>Sarah Wanjiku</strong><br><small style="color:var(--muted)">Project Manager</small></div></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:8px"><div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center"><i class="fas fa-user"></i></div><div><strong>Sarah Wanjiku</strong><br><small style="color:var(--accent)">Project Manager</small></div></div>
           </div>
 
           <div class="testimonial-card" data-aos="fade-right" data-aos-delay="120">
             <p>"Titus's technical writing skills are excellent. He created comprehensive documentation."</p>
-            <div style="display:flex;align-items:center;gap:10px;margin-top:8px"><div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center"><i class="fas fa-user"></i></div><div><strong>Michael Otieno</strong><br><small style="color:var(--muted)">CTO</small></div></div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:8px"><div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center"><i class="fas fa-user"></i></div><div><strong>Michael Otieno</strong><br><small style="color:var(--accent)">CTO</small></div></div>
           </div>
         </div>
 
