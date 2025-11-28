@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Certificate Verification</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #042855;
+      --orange: #ff6f00;
+      --muted: #666;
+      --card-bg: #fff;
+      --page-bg: #f5f5f5;
+      --green: #2e7d32;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--page-bg);
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .certificate {
+      max-width: 920px;
+      margin: 40px auto;
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 25px 35px;
+      position: relative;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    /* Decorative logos */
+    .corner {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    .top-right {
+      top: 10px;
+      right: 10px;
+      width: 170px;
+    }
+
+    .bottom-right {
+      right: 0px;
+      bottom: 10px;
+      width: 170px;
+    }
+
+    /* Moringa logo header */
+    .brand {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .brand img {
+      width: 170px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--navy);
+      font-size: 30px;
+      margin-top: 4px;
+      margin-bottom: 2px;
+      letter-spacing: 1px;
+    }
+
+    .verified-for {
+      text-align: left;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .recipient {
+      color: var(--orange);
+      text-align: center;
+      font-weight: 700;
+      font-size: 25px;
+      margin: 4px 0 8px;
+    }
+
+    .achievement {
+        text-align: left;
+        color: #585858;
+        margin: 0 0 14px 0px; /* pushed slightly from left edge */
+        max-width: 85%;
+        line-height: 1.6;
+        font-size: 15px;
+      }      
+
+    
+    .meta {
+      background: #fbfbfb;
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .meta strong {
+      color: var(--navy);
+    }
+
+    .meta ul {
+      margin: 10px 0 0 20px;
+    }
+
+    .meta li {
+      margin-bottom: 6px;
+    }
+
+    /* Status section */
+    .status-box {
+      border-radius: 10px;
+      padding: 20px;
+      background: linear-gradient(180deg, #ffffff, #f7fff8);
+      box-shadow: 0 6px 15px rgba(46, 125, 50, 0.08);
+      text-align: center;
+      margin: 20px auto 10px;
+      max-width: 250px;
+    }
+
+    .status-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .status-badge svg {
+      flex: 0 0 42px;
+      width: 36px;
+      height: 36px;
+      background: #e8f5e9;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    /* Signature */
+    .signature {
+      text-align: center;
+      margin-top: 18;
+    }
+
+    .signature img {
+      width: 110px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    .signature p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+   /* Footer */
+.certificate-id {
+    display: flex;
+    justify-content: flex-start; /* ✅ Aligns content to the left */
+    gap: 110px;
+    margin: 0 0 14px 30px; /* optional: add small left padding */
+    margin-top: 14px;
+    color: var(--muted);
+    font-size: 10px;
+    flex-wrap: wrap;
+    opacity: 70%;
+}
+
+
+    @media (max-width: 768px) {
+      .certificate {
+        padding: 30px;
+      }
+
+      .top-right, .bottom-right {
+        width: 80px;
+      }
+
+      .bottom-left {
+        width: 90px;
+      }
+
+      .brand img {
+        width: 130px;
+      }
+
+      .achievement {
+        max-width: 100%;
+      }
+
+      .certificate-id {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="certificate" id="certificate">
+    <!-- Decorative corners -->
+    <img class="corner top-right" src="https://moringa.my.salesforce-sites.com/certificateStatus/resource/1731578471000/top_right_logo" alt="Top Decoration">
+    <img class="corner bottom-right" src="https://moringa.my.salesforce-sites.com/certificateStatus/resource/1731578471000/bottom_right_logo" alt="Bottom Decoration">
+
+    <!-- Logo -->
+    <div class="brand">
+      <img src="https://moringa.my.salesforce-sites.com/certificateStatus/resource/1681809537000/logo" alt="Moringa School Logo">
+    </div>
+
+    <h1>CERTIFICATE VERIFICATION</h1>
+    <div class="verified-for">VERIFIED FOR:</div>
+
+    <div class="recipient" id="recipientName">Loading...</div>
+    <div class="achievement" id="achievement"></div>
+    <div class="meta" id="metaBlock"></div>
+
+    <div class="status-box">
+      <div class="status-badge">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" fill="#4bd37b"></circle>
+          <path d="M46 14L25 35.6l-7-7.2l-7 7.2L25 50l28-28.8z" fill="#fff"></path>
+        </svg>
+        <span id="statusText">Approved</span>
+      </div>
+      <div id="issuedOn" style="font-size:13px;color:#333;"></div>
+      <div id="duration" style="font-size:13px;color:#555;"></div>
+    </div>
+
+    <div class="signature" id="signatureBlock">
+      <img src="https://moringa.my.salesforce-sites.com/certificateStatus/resource/1731578471000/ceo_signature" alt="CEO Signature">
+      <p><strong>Nikki Germany</strong><br>CEO, Moringa School</p>
+    </div>
+
+    <div class="certificate-id">
+      <div id="studentId">Student ID: —</div>
+      <div>For more info: access@moringaschool.com</div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const certId = params.get('id');
+
+    const certificates = {
+      "001": {
+        id: "10034017",
+        name: "Levis Otieno Rabah",
+        course: "Artificial Intelligence Launchpad",
+        issued: "October 25, 2025",
+        duration: "1 Month",
+        skillset: [
+          "AI Fundamentals: Machine Learning, Deep Learning, Natural Language Processing (NLP)",
+          "AI Tools & Frameworks: TensorFlow, PyTorch, Scikit-learn",
+          "AI Ethics and Responsible AI Practices"
+        ]
+      },
+      "002": {
+        id: "10034018",
+        name: "Titus Kyoyo Mboya",
+        course: "Full Stack Web Development",
+        issued: "June 24, 2025",
+        duration: "6 Months",
+        skillset: [
+          "Frontend: HTML, CSS, JavaScript, React",
+          "Backend: Node.js, Express, MongoDB",
+          "Version Control: Git & GitHub"
+        ]
+      }
+    };
+
+    const c = certificates[certId];
+    if (c) {
+      document.getElementById('recipientName').textContent = c.name;
+      document.getElementById('achievement').innerHTML =
+        `For successfully completing the <strong>${c.course}</strong> at <strong>Moringa School</strong>, and issued a certificate on <strong>${c.issued}</strong>.`;
+      document.getElementById('metaBlock').innerHTML =
+        `<p><strong>Course Duration:</strong> ${c.duration}</p>
+         <p><strong>Course Skillset:</strong></p>
+         <ul>${c.skillset.map(s => `<li>${s}</li>`).join('')}</ul>`;
+      document.getElementById('issuedOn').textContent = 'Issued: ' + c.issued;
+      document.getElementById('duration').textContent = 'Duration: ' + c.duration;
+      document.getElementById('studentId').textContent = 'Student ID: ' + c.id;
+    } else {
+      document.getElementById('recipientName').textContent = 'Unknown Certificate ID';
+      document.getElementById('achievement').innerHTML =
+        '<span style="color:#c62828;font-weight:700">❌ Invalid or Unverified Certificate.</span>';
+      document.getElementById('metaBlock').innerHTML = '';
+      document.getElementById('statusText').textContent = 'Not Verified';
+    }
+  </script>
+</body>
+</html>
