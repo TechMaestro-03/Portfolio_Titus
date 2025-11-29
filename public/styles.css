@@ -13,8 +13,6 @@
     --light-bg: #2c3e5a;
     --light-text: #ffffff;
     --transition: all 0.3s ease;
-    --font-heading: 'Exo 2', sans-serif;
-    --font-body: 'Alegreya Sans', sans-serif;
   }
   
   [data-theme="light"] {
@@ -179,6 +177,7 @@
   
   .nav-links a {
     color: inherit;
+    background-color: transparent;
     text-decoration: none;
     padding: 12px 18px;
     border-radius: 8px;
@@ -2312,7 +2311,6 @@ footer .copyright {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        background: transparent;
         border: 1px solid var(--glass-border);
         color: var(--accent);
         font-size: 1.2rem;
@@ -2561,7 +2559,7 @@ body.menu-open {
 
 /* === DARK MODE MOBILE MENU === */
 [data-theme="light"] .nav-links {
-    background: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
 }
 
