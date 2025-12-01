@@ -7,10 +7,10 @@
     --bg: #ffffff;
     --card: rgba(255, 255, 255, 0.04);
     --glass: rgba(255, 255, 255, 0.06);
-    --accent: #ce8f5b;
+    --accent: #d47318;
     --muted: #305094;
     --glass-border: rgba(0, 0, 0, 0.08);
-    --light-bg: #2c3e5a;
+    --light-bg: #1f3f72;
     --light-text: #ffffff;
     --transition: all 0.3s ease;
   }
@@ -1648,7 +1648,7 @@ footer .copyright {
   .back-to-top {
     position: fixed;
     left: 18px;
-    bottom: 18px;
+    bottom: 20px;
     background: var(--card);
     border: none;
     padding: 10px;
