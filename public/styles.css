@@ -534,6 +534,16 @@
     align-items: center;
     gap: 40px;
   }
+  .intro-tag {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    opacity: 0.85;
+    text-transform: uppercase;
+  }
+  
   
   .hero-left {
     flex: 1;
