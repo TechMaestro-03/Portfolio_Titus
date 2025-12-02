@@ -8,9 +8,9 @@
     --card: rgba(255, 255, 255, 0.04);
     --glass: rgba(255, 255, 255, 0.06);
     --accent: #d47318;
-    --muted: #305094;
+    --muted: #2e3f63;
     --glass-border: rgba(0, 0, 0, 0.08);
-    --light-bg: #1f3f72;
+    --light-bg: #537ab4;
     --light-text: #ffffff;
     --transition: all 0.3s ease;
     --font-heading: "DM Serif Display", serif;
@@ -390,6 +390,7 @@
   text-align: center;
   font-size: 2.4rem;
   font-weight: 900;
+  font-family: var(--font-heading);
   padding: 10px 20px;
 
   /* No background */
@@ -790,7 +791,7 @@
   backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 20px;
-  border: 1px solid #60a5fa;
+  border: 1px solid var(--accent);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1920,7 +1921,9 @@ footer .copyright {
   
   .stat-item {
       font-size: 1.8rem;
+      font-family: var(--font-heading);
       padding: 8px 15px;
+      font-weight: 900;
   }
   
   /* Quick info */
