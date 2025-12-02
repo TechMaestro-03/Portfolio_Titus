@@ -1112,7 +1112,7 @@
 /* Timeline card */
 .timeline-item {
   position: relative;
-  width: 50%;
+  width: 100%;
   padding: 25px 15px;
   margin: 10px 0;
 
