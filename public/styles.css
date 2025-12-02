@@ -1337,7 +1337,7 @@
 ---------------------------- */
 .testimonial-card {
   min-width: 320px;
-  padding: 24px;
+  padding: 30px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.15);
@@ -1345,6 +1345,7 @@
   box-shadow: 0 8px 40px rgba(0,0,0,0.3),
               0 0 12px rgba(0,255,180,0.15);
   color: #e6e6e6;
+  margin-left: 5px;
   transition: 0.35s ease;
   position: relative;
 }
