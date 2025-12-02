@@ -337,57 +337,91 @@
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">Recent Projects</h2>
-        <div class="projects-grid">
+    <!-- Projects Section -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Recent Projects</h2>
 
-          <!-- card 1 -->
-          <article class="project-card" tabindex="0" data-aos="zoom-in" aria-labelledby="p1-title">
-            <div class="project-img"><img src="public/images/Screenshot (195).png" alt="TechPulse" loading="lazy"></div>
-            <div class="project-content">
-              <h3 id="p1-title">TechPulse</h3>
-              <p class="muted">Personalized news aggregator using Firebase</p>
-              <div class="project-tags"><span class="project-tag">Firebase</span><span class="project-tag">JS</span><span class="project-tag">Bootstrap</span></div>
-              <div style="margin-top:10px;display:flex;gap:8px">
-                <button class="btn open-modal" data-project='{"title":"TechPulse","desc":"Personalized news aggregator","img":"public/images/Screenshot (195).png","repo":"https://github.com/TechMaestro-03/TechPulse","demo":"#"}'>View</button>
-                <a href="https://github.com/TechMaestro-03/TechPulse" class="resume-btn" target="_blank">Code</a>
-              </div>
-            </div>
-          </article>
+    <div class="projects-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
 
-          <!-- card 2 -->
-          <article class="project-card" tabindex="0" data-aos="zoom-in" data-aos-delay="80" aria-labelledby="p2-title">
-            <div class="project-img"><img src="public/images/Screenshot (144).png" alt="MkulimaFM" loading="lazy"></div>
-            <div class="project-content">
-              <h3 id="p2-title">Mkulima Farm Manager</h3>
-              <p class="muted">Farm management web app</p>
-              <div class="project-tags"><span class="project-tag">Tailwind</span><span class="project-tag">JS</span><span class="project-tag">Python</span></div>
-              <div style="margin-top:10px;display:flex;gap:8px">
-                <button class="btn open-modal" data-project='{"title":"Mkulima Farm Manager","desc":"Responsive web app for farm tasks","img":"public/images/Screenshot (144).png","repo":"https://github.com/Mkulima-Farm-Management/New-MKFS1","demo":"#"}'>View</button>
-                <a href="https://github.com/Mkulima-Farm-Management/New-MKFS1" class="resume-btn" target="_blank">Code</a>
-              </div>
-            </div>
-          </article>
+      <!-- Project Card 1 -->
+      <article class="project-card" data-aos="zoom-in">
+        <div class="project-img-wrapper">
+          <img src="public/images/Screenshot (195).png" alt="TechPulse">
 
-          <!-- card 3 -->
-          <article class="project-card" tabindex="0" data-aos="zoom-in" data-aos-delay="160" aria-labelledby="p3-title">
-            <div class="project-img"><img src="public/images/Screenshot (304).png" alt="Task Manager" loading="lazy"></div>
-            <div class="project-content">
-              <h3 id="p3-title">Task Manager</h3>
-              <p class="muted">Real-time task manager with Firestore</p>
-              <div class="project-tags"><span class="project-tag">PHP</span><span class="project-tag">React</span><span class="project-tag">MongoDB</span></div>
-              <div style="margin-top:10px;display:flex;gap:8px">
-                <button class="btn open-modal" data-project='{"title":"Task Manager","desc":"Real-time task manager","img":"public/images/Screenshot (304).png","repo":"https://github.com/TechMaestro-03/task_manager","demo":"#"}'>View</button>
-                <a href="https://github.com/TechMaestro-03/task_manager" class="resume-btn" target="_blank">Code</a>
-              </div>
-            </div>
-          </article>
+          <!-- Floating Buttons -->
+          <a href="#" class="float-btn view-btn"><i class="fas fa-eye"></i></a>
+          <a href="https://github.com/TechMaestro-03/TechPulse" target="_blank" class="float-btn code-btn"><i class="fab fa-github"></i></a>
 
+          <!-- Center Tag -->
+          <span class="project-type">Web App</span>
         </div>
-      </div>
-    </section>
+
+        <!-- Content -->
+        <div class="project-content">
+          <h3>TechPulse</h3>
+          <p class="project-description">Personalized news aggregator using Firebase machine learning to deliver curated news based on user interests.</p>
+          <div class="project-tags">
+            <span class="project-tag">Firebase</span>
+            <span class="project-tag">JS</span>
+            <span class="project-tag">Bootstrap</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Card 2 -->
+      <article class="project-card" data-aos="zoom-in" data-aos-delay="80">
+        <div class="project-img-wrapper">
+          <img src="public/images/Screenshot (144).png" alt="Mkulima Farm Manager">
+
+          <!-- Floating Buttons -->
+          <a href="#" class="float-btn view-btn"><i class="fas fa-eye"></i></a>
+          <a href="https://github.com/Mkulima-Farm-Management/New-MKFS1" target="_blank" class="float-btn code-btn"><i class="fab fa-github"></i></a>
+
+          <!-- Center Tag -->
+          <span class="project-type">Web App</span>
+        </div>
+
+        <!-- Content -->
+        <div class="project-content">
+          <h3>Mkulima Farm Manager</h3>
+          <p class="project-description">Responsive farm management system for managing tasks, workers, and farm operations efficiently.</p>
+          <div class="project-tags">
+            <span class="project-tag">Tailwind</span>
+            <span class="project-tag">JS</span>
+            <span class="project-tag">Python</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Card 3 -->
+      <article class="project-card" data-aos="zoom-in" data-aos-delay="160">
+        <div class="project-img-wrapper">
+          <img src="public/images/Screenshot (304).png" alt="Task Manager">
+
+          <!-- Floating Buttons -->
+          <a href="#" class="float-btn view-btn"><i class="fas fa-eye"></i></a>
+          <a href="https://github.com/TechMaestro-03/task_manager" target="_blank" class="float-btn code-btn"><i class="fab fa-github"></i></a>
+
+          <!-- Center Tag -->
+          <span class="project-type">Web App</span>
+        </div>
+
+        <!-- Content -->
+        <div class="project-content">
+          <h3>Task Manager</h3>
+          <p class="project-description">Real-time task management system using Firestore to track progress and assign tasks efficiently.</p>
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">MongoDB</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
     <!-- Experience / Timeline -->
     <section id="experience">
@@ -431,7 +465,7 @@
   <div class="container">
     <h2 class="section-title">Certifications & Achievements</h2>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:10px;">
 
       <!-- Google Data Analytics -->
       <div class="project-card" data-aos="fade-up">
