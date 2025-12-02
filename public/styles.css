@@ -616,7 +616,7 @@
   border: none;
   width: 100%;
   max-width: 100%;
-  box-shadow: 0 8px 24px rgba(58, 58, 58, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   border-radius: 20px;
   padding: 20px;
   backdrop-filter: blur(12px);
@@ -624,6 +624,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-bottom: 10px;
   gap: 20px; /* more breathing room inside */
 }
 
@@ -759,6 +760,18 @@
   background: var(--accent-hover);
   transform: translateY(-2px);
 }
+.cert-btn {
+  display: inline-block;
+  margin-top: 8px;
+  color:var(--accent);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.cert-btn:hover {
+  transform: translateY(-2px);
+}
+
 
   
   /* ================= SKILLS & SERVICES ================= */
@@ -1489,10 +1502,10 @@
    CONTACT INFO CARD (GLASS)
 ------------------------------ */
 .contact-info {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.07);
   padding: 28px;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.13);
   backdrop-filter: blur(14px);
   box-shadow: 0 8px 40px rgba(0,0,0,0.25);
   transition: 0.3s;
@@ -1511,8 +1524,9 @@
 }
 
 /* Icons & text */
+
 .contact-info i {
-  color: #06b6d4;
+  color: #27265c;
   margin-right: 10px;
 }
 
