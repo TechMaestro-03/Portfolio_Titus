@@ -115,6 +115,7 @@
   header {
     position: sticky;
     top: 0;
+    overflow: hidden;
     width: 100%;
     background:rgb(32, 32, 68); /* soft glass effect */
     color:var(--accent);
@@ -146,7 +147,9 @@
   }
   
   .logo {
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 26px;
+    font-family: "Faster One", system-ui;
     letter-spacing: 0.2px;
     display: flex;
     align-items: center;
@@ -209,6 +212,7 @@
   display: none;
   font-size: 26px;
   cursor: pointer;
+  background-color: white;
   color: white;
   padding: 8px;
   border-radius: 6px;
@@ -2223,7 +2227,7 @@ footer .copyright {
 @media (max-width: 900px) {
   .nav-links {
       backdrop-filter: blur(20px);
-      background: rgba(15, 23, 36, 0.95);
+      background: rgba(255, 255, 255, 0.95);
   }
   
   .nav-links a {
@@ -2466,7 +2470,7 @@ footer .copyright {
 }
 
 .menu-toggle.active {
-    background: var(--accent);
+    background: white;
     color: #042027;
     transform: rotate(90deg);
 }
@@ -2478,7 +2482,7 @@ footer .copyright {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
     z-index: 999;
     opacity: 0;

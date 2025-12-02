@@ -859,7 +859,7 @@ function initParticles() {
                     random: true
                 },
                 size: {
-                    value: 5,
+                    value: 30,
                     random: true
                 },
                 line_linked: {
