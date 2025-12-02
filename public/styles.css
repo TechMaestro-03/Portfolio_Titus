@@ -722,6 +722,7 @@
 .cert-btn {
   display: inline-block;
   margin-top: 8px;
+  font-size: 13px;
   color:var(--accent);
   text-decoration: none;
   transition: 0.3s ease;
