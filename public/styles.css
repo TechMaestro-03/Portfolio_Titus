@@ -35,7 +35,7 @@
   html,
   body {
     height: 100%;
-    width: 100%;
+    width: 100%;    
     font-family: 'Nunito Sans', system-ui, sans-serif;
     background: linear-gradient(180deg, #ffffff 0%, #ffffff 60%);
     color: #302758;
@@ -115,8 +115,6 @@
   header {
     position: sticky;
     top: 0;
-    width: 100dvh;   /* Correct on mobile */
-    min-width: 100dvh;
     width: 100%;
     background:rgb(32, 32, 68); /* soft glass effect */
     color:var(--accent);
