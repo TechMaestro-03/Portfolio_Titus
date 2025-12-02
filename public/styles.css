@@ -9,7 +9,7 @@
     --glass: rgba(255, 255, 255, 0.06);
     --accent: #d47318;
     --muted: #2e3f63;
-    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-border: rgba(5, 5, 5, 0.08);
     --light-bg: #537ab4;
     --light-text: #ffffff;
     --transition: all 0.3s ease;
@@ -579,7 +579,8 @@
     padding: 10px 16px;
     border-radius: 12px;
     background: linear-gradient(90deg, var(--accent), #ac9cf3);
-    color: #042027;
+    color: #000000;
+    font-weight: 600;
     text-decoration: none;
     border: none;
     transition: var(--transition);
