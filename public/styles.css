@@ -1072,8 +1072,7 @@
   }
 }
 /* ===========================
-   ALTERNATING TIMELINE
-   (Portfolio-Matched Styling)
+   EXPERIENCE TIMELINE (FIXED)
 =========================== */
 
 #experience {
@@ -1086,13 +1085,13 @@
   color: var(--accent);
 }
 
-/* Main timeline container */
+/* Main container */
 .timeline {
   position: relative;
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 25px 0px;
+  padding: 25px 0;
 }
 
 /* Center line */
@@ -1101,7 +1100,7 @@
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(-0%);
+  transform: translateX(-50%);
   width: 2px;
   height: 100%;
   background: var(--accent);
@@ -1109,20 +1108,19 @@
   border-radius: 10px;
 }
 
-/* Timeline card */
+/* Each timeline item */
 .timeline-item {
   position: relative;
   width: 50%;
   padding: 25px 15px;
-  margin: 20px 0px;
+  margin: 20px 0;
 
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
 
-  border: none;
   border-radius: 16px 50px;
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
   transition: 0.3s ease;
 }
 
@@ -1132,17 +1130,17 @@
   box-shadow: 0 15px 35px rgba(0,0,0,0.22);
 }
 
-/* Left card */
+/* Left side items */
 .timeline-item:nth-child(odd) {
   left: -1%;
 }
 
-/* Right card */
+/* Right side items */
 .timeline-item:nth-child(even) {
   left: 52%;
 }
 
-/* Connector dot */
+/* Dot connector */
 .timeline-item::before {
   content: "";
   position: absolute;
@@ -1150,21 +1148,21 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-
   background: var(--accent);
   box-shadow: 0 0 15px var(--accent);
 }
 
-/* Dot positions */
+/* Dot position left */
 .timeline-item:nth-child(odd)::before {
   right: -10px;
 }
 
+/* Dot position right */
 .timeline-item:nth-child(even)::before {
   left: -18px;
 }
 
-/* Date */
+/* Text styling */
 .timeline-date {
   font-size: 0.85rem;
   color: var(--accent);
@@ -1173,7 +1171,6 @@
   margin-bottom: 6px;
 }
 
-/* Title */
 .timeline-item h3 {
   font-size: 1.1rem;
   font-weight: 700;
@@ -1181,7 +1178,6 @@
   color: var(--text);
 }
 
-/* Description */
 .timeline-item p {
   font-size: 0.95rem;
   line-height: 1.6;
@@ -1189,52 +1185,56 @@
 }
 
 /* ===========================
-   RESPONSIVE — small screens
-   (Your requested changes)
+   RESPONSIVE — FIXED VERSION
 =========================== */
 
 @media (max-width: 850px) {
+
+  /* Move the timeline line to left */
   .timeline::before {
-    left: 10px;
+    left: 20px;
+    transform: none;
   }
 
   .timeline-item {
-    width: 90%;                 /* ✔ WIDTH GETS SMALLER */
-    height: auto;               /* Let content expand naturally */
-    min-height: 20px;          /* ✔ HEIGHT INCREASES */
-    left: 0 !important;
-    margin-left: 40px;
-    padding: 30px 28px;
+    width: calc(100% - 60px);   /* Perfect responsive width */
+    left: 40px !important;      /* Align items properly */
+    margin-left: 0;             /* Prevent push to the right */
+    padding: 28px 24px;
   }
 
   .timeline-item::before {
-    left: -32px !important;
+    left: -30px !important;
     right: auto;
   }
 }
 
-/* Phones */
 @media (max-width: 600px) {
   .timeline-item {
-    width: 90%;                 /* Narrower */
-    min-height: 20px;          /* ✔ Taller */
-    padding: 24px 26px;
+    width: calc(100% - 50px);
+    left: 35px !important;
+    padding: 24px 22px;
   }
 }
 
-/* Very small phones */
 @media (max-width: 420px) {
   .timeline-item {
-    width: 95%;                 /* Very narrow */
-    min-height: 20px;          /* ✔ Much taller */
-    padding: 24px 24px;
+    width: calc(100% - 40px);
+    left: 30px !important;
+    padding: 22px 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  .timeline-item {
+    width: calc(100% - 30px);
+    left: 25px !important;
+    padding: 20px 18px;
   }
 }
 
 
 
-  
-  
   /* === BLOG === */
   .blog-grid {
     display: grid;
