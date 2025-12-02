@@ -1488,6 +1488,9 @@
 ------------------------------ */
 .contact-grid {
   display: grid;
+  max-width: 1150px;
+  margin: auto;
+  margin-bottom: 10px;
   grid-template-columns: 1fr 1.2fr;
   gap: 32px;
 }
@@ -1502,9 +1505,8 @@
    CONTACT INFO CARD (GLASS)
 ------------------------------ */
 .contact-info {
-  background: rgba(255, 255, 255, 0.07);
-  padding: 28px;
-  border-radius: 18px;
+  padding: 20px;
+  border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.13);
   backdrop-filter: blur(14px);
   box-shadow: 0 8px 40px rgba(0,0,0,0.25);
@@ -1534,9 +1536,8 @@
    CONTACT FORM (GLASS)
 ------------------------------ */
 .contact-form {
-  background: rgba(255, 255, 255, 0.07);
-  padding: 28px;
-  border-radius: 18px;
+  padding: 20px;
+  border-radius: 14px;
   border: 1px solid rgba(255,255,255,0.13);
   backdrop-filter: blur(14px);
   box-shadow: 0 8px 40px rgba(0,0,0,0.25);
@@ -1618,6 +1619,40 @@
 #newsletter .form-control {
   margin-top: 0;
 }
+/* Smaller screens */
+@media (max-width: 900px) {
+  .contact-info,
+  .contact-form {
+    padding: 18px;
+    border-radius: 12px;
+    transform: none !important;   /* prevent hover push */
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .contact-info,
+  .contact-form {
+    padding: 15px;
+  }
+
+  #contact .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .contact-info,
+  .contact-form {
+    padding: 12px;
+  }
+
+  #contact {
+    padding: 60px 0;
+  }
+}
+
 
 
   
