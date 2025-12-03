@@ -1443,6 +1443,7 @@
   background: linear-gradient(135deg, #6366f1, #06b6d4);
   color: #ffffff;
   padding: 12px 28px;
+  margin-left: 10px;
   border-radius: 14px;
   border: none;
   cursor: pointer;
