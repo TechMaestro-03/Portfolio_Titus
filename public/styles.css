@@ -413,6 +413,7 @@
   width: 100%;
   max-width: 1100px;
   margin: 60px auto;
+  margin-bottom: 0px;
   position: relative;
 }
 
@@ -910,7 +911,7 @@
 .section-title {
   text-align: center;
   font-size: 28px;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   color: var(--accent);
   font-weight: 600;
 }
@@ -1049,7 +1050,7 @@
 
 /* Skill Technology List */
 .skill-tech {
-  margin-top: 0px;
+  margin-top: 10px;
   font-size: 13px;
   color: var(--muted);
   text-align: center;
