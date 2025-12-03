@@ -711,7 +711,6 @@
   .container {
     max-width: 1100px;
     margin: 0 auto;
-    margin-bottom: 10px;
   }
   
   .section-title {
@@ -936,7 +935,7 @@
   backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 20px;
-  border: 1px solid rgb(240, 197, 173);
+  border: 1px solid rgb(243, 218, 204);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -987,7 +986,7 @@
 /* Skill Bars Container */
 .skill-bars {
   width: 100%;
-  margin-top: 8px;
+  margin-top: 0px;
 }
 /* Individual Skill Bar */
 .skill-bar {
@@ -996,7 +995,7 @@
   border-radius: 999px;
   overflow: hidden;
   position: relative;
-  margin-top: 12px;
+  margin-top: 0px;
 }
 
 /* Filled portion */
@@ -1050,7 +1049,7 @@
 
 /* Skill Technology List */
 .skill-tech {
-  margin-top: 8px;
+  margin-top: 0px;
   font-size: 13px;
   color: var(--muted);
   text-align: center;
