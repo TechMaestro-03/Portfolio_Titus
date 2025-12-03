@@ -511,6 +511,15 @@ function initProjectModals() {
         }
     });
 }
+// About Expand Function
+document.querySelector('.about-toggle').addEventListener('click', function() {
+    const content = document.querySelector('.about-content');
+    const icon = this.querySelector('i');
+  
+    content.classList.toggle('open');
+    icon.classList.toggle('rotate'); // optional for arrow movement
+  });
+  
 
 // 15. Testimonial Carousel
 function initTestimonialCarousel() {
@@ -845,6 +854,7 @@ function initSearchFunctionality() {
         if (term.length > 2) performSearch(term);
     });
 }
+
 
 
 
