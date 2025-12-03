@@ -1730,7 +1730,7 @@ footer .container {
 /* Copyright */
 footer .copyright {
   font-size: 14px;
-  color: var(--muted);
+  color: rgb(124, 122, 122);
 }
 
 /* Responsive */
