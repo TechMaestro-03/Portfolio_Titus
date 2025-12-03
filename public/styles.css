@@ -579,8 +579,8 @@
     font-size: 13px;
     padding: 10px 16px;
     border-radius: 12px;
-    background: linear-gradient(90deg, var(--accent), #ac9cf3);
-    color: #000000;
+    background: var(--accent);
+    color: #ffffff;
     font-weight: 600;
     text-decoration: none;
     border: none;
