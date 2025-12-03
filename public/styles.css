@@ -1717,7 +1717,7 @@ footer .container {
 }
 
 .social-link {
-  color: var(--muted);
+  color: rgb(172, 172, 172);
   font-size: 20px;
   transition: all 0.3s ease;
 }
