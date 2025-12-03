@@ -774,7 +774,6 @@ function initCustomCursor() {
         cursor.style.display = 'none';
     }
 }
-
 // 20. Search Functionality
 function initSearchFunctionality() {
     const searchToggle = document.getElementById('search-toggle');
@@ -786,55 +785,69 @@ function initSearchFunctionality() {
     function closeSearch() {
         searchContainer.classList.remove('open');
         searchInput.value = '';
+        searchInput.blur();
     }
     
     function performSearch(term) {
-        const searchableElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, .project-card, .skill-category');
+        const searchableElements = document.querySelectorAll(
+            'h1, h2, h3, h4, h5, h6, p, .project-card, .skill-category'
+        );
+
         let found = false;
-        
-        searchableElements.forEach(el => {
-            const text = el.textContent.toLowerCase();
-            if (text.includes(term)) {
+
+        for (const el of searchableElements) {
+            if (el.textContent.toLowerCase().includes(term)) {
                 found = true;
-                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                return;
+                el.scrollIntoView({ behavior: "smooth", block: "center" });
+                break;
             }
-        });
-        
-        if (!found) {
-            console.log('No results found for:', term);
         }
+
+        if (!found) console.log("No results for:", term);
     }
     
-    // Toggle search
-    searchToggle.addEventListener('click', function() {
+    
+    // 🔍 Open search
+    searchToggle.addEventListener('click', () => {
         searchContainer.classList.add('open');
-        searchInput.focus();
+        setTimeout(() => searchInput.focus(), 150);
     });
     
-    // Close search when clicking outside
-    searchContainer.addEventListener('click', function(e) {
-        if (e.target === searchContainer) {
+    
+    // ✖ Close when clicking background
+    searchContainer.addEventListener('click', (e) => {
+        if (e.target === searchContainer) closeSearch();
+    });
+    
+    
+    // ⎋ Close with escape globally
+    document.addEventListener('keyup', (e) => {
+        if ((e.key === 'Escape' || e.key === 'Esc') &&
+            searchContainer.classList.contains('open')) {
             closeSearch();
         }
     });
     
-    // Close search with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && searchContainer.classList.contains('open')) {
-            closeSearch();
+    
+    // ⏎ Trigger search on ENTER
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault(); // prevent form submission
+            const term = searchInput.value.trim().toLowerCase();
+            if (term.length > 0) performSearch(term);
         }
     });
+
     
-    // Search functionality
-    searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase().trim();
-        
-        if (searchTerm.length > 2) {
-            performSearch(searchTerm);
-        }
+    // Auto-search while typing (optional)
+    searchInput.addEventListener('input', () => {
+        const term = searchInput.value.toLowerCase().trim();
+        if (term.length > 2) performSearch(term);
     });
 }
+
+
+
 
 // 21. Particles Background
 function initParticles() {
