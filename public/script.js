@@ -511,15 +511,33 @@ function initProjectModals() {
         }
     });
 }
-// About Expand Function
-document.querySelector('.about-toggle').addEventListener('click', function() {
-    const content = document.querySelector('.about-content');
-    const icon = this.querySelector('i');
-  
-    content.classList.toggle('open');
-    icon.classList.toggle('rotate'); // optional for arrow movement
-  });
-  
+const aboutModal = document.getElementById("aboutModal");
+const openBtn = document.getElementById("openAboutModal");
+const closeBtn = document.querySelector(".modal-close");
+
+// Open Modal
+openBtn.addEventListener("click", () => {
+  aboutModal.classList.add("show");
+  document.body.style.overflow = "hidden"; // prevent background scroll
+});
+
+// Close Modal
+closeBtn.addEventListener("click", closeModal);
+aboutModal.addEventListener("click", e => {
+  if (e.target === aboutModal) closeModal(); // click outside to close
+});
+
+// Close with ESC key
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
+});
+
+function closeModal() {
+  aboutModal.classList.remove("show");
+  document.body.style.overflow = "auto";
+}
+
+
 
 // 15. Testimonial Carousel
 function initTestimonialCarousel() {
