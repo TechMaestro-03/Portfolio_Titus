@@ -146,7 +146,7 @@ header {
   background: rgb(32, 32, 68);
   color: var(--accent);
   backdrop-filter: blur(0);
-  z-index: 999;
+  z-index: 1000;
   transition: var(--transition);
 }
 
@@ -702,9 +702,10 @@ header.scrolled {
 
 /* === SECTIONS === */
 section {
-  padding: 60px 30px;
+  padding: 60px 0px;
   min-height: 10vh;
-  scroll-margin-top: 100px; /* adjust size to match your navbar height */
+  margin: 0 auto;
+  scroll-margin-top: 0px; /* adjust size to match your navbar height */
   box-sizing: border-box;
 }
 
