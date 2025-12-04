@@ -24,10 +24,10 @@
   
   [data-theme="dark"] {
     --bg: var(--light-bg);
-    --card: #ffffff;
+    --card: #292828;
     --glass: rgba(58, 57, 57, 0.8);
     --accent: #3930b1;
-    --muted: #9e9b9b;
+    --muted: #a3a3a3;
     --glass-border: rgba(13, 17, 23, 0.06);
     --light-text: #ffffff;
     --hero-bg-main: #000000;
