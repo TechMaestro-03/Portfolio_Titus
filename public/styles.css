@@ -1258,6 +1258,24 @@ section {
     padding: 20px 18px;
   }
 }
+/* For tablets and mobile */
+@media screen and (max-width: 768px) {
+  .card {
+      width: 90%; /* make it narrower on small screens */
+      margin: 10px auto; /* center it */
+      padding: 15px;
+  }
+}
+
+/* For very small mobile screens */
+@media screen and (max-width: 480px) {
+  .card {
+      width: 100%; /* take almost full width */
+      margin: 5px 0;
+      padding: 10px;
+  }
+}
+
 
 /* === TESTIMONIALS === */
 #testimonials {
