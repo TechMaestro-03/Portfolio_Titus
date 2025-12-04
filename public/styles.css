@@ -10,21 +10,31 @@
     --accent: #d47318;
     --muted: #2e3f63;
     --glass-border: rgba(5, 5, 5, 0.08);
-    --light-bg: #537ab4;
+    --light-bg: #000000;
     --light-text: #ffffff;
     --transition: all 0.3s ease;
     --font-heading: "DM Serif Display", serif;
     --font-body: 'Nunito Sans', system-ui, sans-serif;
+    --hero-bg-main: #ffffff;
+    --hero-bg-dot1: rgb(190, 190, 209);
+    --hero-bg-dot2: rgb(192, 193, 199);
+    --hero-bg-line1: #e4e4e4;
+    --hero-bg-line2: #a4a4a4;
   }
   
   [data-theme="light"] {
     --bg: var(--light-bg);
     --card: #ffffff;
-    --glass: rgba(255, 255, 255, 0.8);
+    --glass: rgba(58, 57, 57, 0.8);
     --accent: #3930b1;
-    --muted: #6b7280;
+    --muted: #9e9b9b;
     --glass-border: rgba(13, 17, 23, 0.06);
     --light-text: #ffffff;
+    --hero-bg-main: #000000;
+    --hero-bg-dot1: #33334d;
+    --hero-bg-dot2: #444466;
+    --hero-bg-line1: #343438;
+    --hero-bg-line2: #242427;
   }
   
   /* === GLOBAL STYLES === */
@@ -43,8 +53,10 @@
   html,
   body {
     height: 100%;
-    color: #302758;
+    color: var(--muted);
+    transition: background 0.3s ease, color 0.3s ease;
     font-size: 14px;
+    background: var(--bg);
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
   
@@ -603,22 +615,32 @@
   
   /* === HERO SECTION === */
   .hero {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 100px 20px 80px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    background: 
-    radial-gradient(rgb(190, 190, 209) 3px, transparent 4px),
-    radial-gradient(rgb(192, 193, 199) 3px, transparent 4px),
-    linear-gradient(#fff 4px, transparent 0),
-    linear-gradient(45deg, transparent 74px, transparent 75px, #e4e4e4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
-    linear-gradient(-45deg, transparent 75px, transparent 76px, #dfdfdf 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
-  #fff;
-  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
-  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-  }
+  width: 100%;           /* full width for background */
+  min-height: 70vh;     /* full viewport height if needed */
+  padding: 100px 20px 80px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  gap: 0px;
+  overflow: hidden;
+  background: 
+    radial-gradient(var(--hero-bg-dot1) 3px, transparent 4px),
+    radial-gradient(var(--hero-bg-dot2) 3px, transparent 4px),
+    linear-gradient(var(--hero-bg-main) 4px, transparent 0),
+    linear-gradient(90deg, transparent 74px, transparent 75px, var(--hero-bg-line1) 75px, var(--hero-bg-line2) 76px, transparent 77px, transparent 109px),
+    linear-gradient(45deg, transparent 75px, transparent 76px, var(--hero-bg-line1) 76px, var(--hero-bg-line2) 77px, transparent 78px, transparent 109px),
+    var(--hero-bg-main);
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0 0, 0 0, 0 0, 0 0;
+  transition: background 0.5s ease;
+}
+
+.hero > .hero-left,
+.hero > .hero-right {
+  max-width: 1100px;    /* constrain content only */
+  width: 100%;
+}
+
   .intro-tag {
     font-size: 1rem;
     font-weight: 600;
@@ -908,12 +930,23 @@
   /* ================= SKILLS & SERVICES ================= */
 
 /* Section Titles */
+
 .section-title {
   text-align: center;
   font-size: 28px;
   margin-bottom: 40px;
   color: var(--accent);
   font-weight: 600;
+}
+
+/* Underline */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 70px;           /* underline length */
+  height: 3px;           /* thickness */
+  background: linear-gradient(90deg, #f7f312,var(--accent));
+  margin: 10px auto 0;    /* spacing */
 }
 
 /* Skills Grid */
