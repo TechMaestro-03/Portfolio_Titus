@@ -610,8 +610,8 @@
     align-items: center;
     gap: 40px;
     background: 
-    radial-gradient(rgb(221, 221, 221) 3px, transparent 4px),
-    radial-gradient(rgb(228, 228, 228) 3px, transparent 4px),
+    radial-gradient(rgb(176, 175, 230) 3px, transparent 4px),
+    radial-gradient(rgb(164, 166, 180) 3px, transparent 4px),
     linear-gradient(#fff 4px, transparent 0),
     linear-gradient(45deg, transparent 74px, transparent 75px, #e4e4e4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
     linear-gradient(-45deg, transparent 75px, transparent 76px, #dfdfdf 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
