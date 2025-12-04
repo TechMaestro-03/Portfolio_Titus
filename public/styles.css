@@ -571,7 +571,7 @@ header.scrolled {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 40px;
   background: 
     radial-gradient(var(--hero-bg-dot1) 3px, transparent 4px),
     radial-gradient(var(--hero-bg-dot2) 3px, transparent 4px),
