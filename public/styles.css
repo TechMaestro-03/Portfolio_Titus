@@ -731,6 +731,8 @@
   /* === SECTIONS === */
   section {
     padding: 60px 30px;
+    min-height: 10vh;  /* fills viewport */
+    box-sizing: border-box;
 
   }
   
