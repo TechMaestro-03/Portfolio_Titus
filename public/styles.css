@@ -566,7 +566,7 @@ header.scrolled {
 /* === HERO SECTION === */
 .hero {
   width: 100%;
-  min-height: 70vh;
+  min-height: 50vh;
   padding: 100px 100px 80px;
   margin: 0 auto;
   display: flex;
