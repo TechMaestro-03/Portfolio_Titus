@@ -22,7 +22,7 @@
     --hero-bg-line2: #a4a4a4;
   }
   
-  [data-theme="light"] {
+  [data-theme="dark"] {
     --bg: var(--light-bg);
     --card: #ffffff;
     --glass: rgba(58, 57, 57, 0.8);
