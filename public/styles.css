@@ -626,10 +626,13 @@
   background: 
     radial-gradient(var(--hero-bg-dot1) 3px, transparent 4px),
     radial-gradient(var(--hero-bg-dot2) 3px, transparent 4px),
-    linear-gradient(var(--hero-bg-main) 4px, transparent 0),
-    linear-gradient(90deg, transparent 74px, transparent 75px, var(--hero-bg-line1) 75px, var(--hero-bg-line2) 76px, transparent 77px, transparent 109px),
-    linear-gradient(45deg, transparent 75px, transparent 76px, var(--hero-bg-line1) 76px, var(--hero-bg-line2) 77px, transparent 78px, transparent 109px),
-    var(--hero-bg-main);
+    linear-gradient(var(--hero-bg-main) 4px, transparent 0), /* horizontal stripe */
+    linear-gradient(-45deg, transparent 50px, transparent 75px, var(--hero-bg-line1) 75px, var(--hero-bg-line2) 76px, transparent 77px, transparent 109px), /* vertical lines */
+    linear-gradient(45deg, transparent 50px, transparent 76px, var(--hero-bg-line1) 76px, var(--hero-bg-line2) 77px, transparent 78px, transparent 109px), /* opposite diagonal lines */
+    linear-gradient(-120deg, transparent 50px, transparent 51px, var(--hero-bg-line1) 51px, var(--hero-bg-line2) 52px, transparent 53px, transparent 100px), /* added diagonal line #1 */
+    linear-gradient(-45deg, transparent 60px, transparent 61px, var(--hero-bg-line1) 61px, var(--hero-bg-line2) 62px, transparent 63px, transparent 110px), /* added diagonal line #2 */
+    linear-gradient(-180deg, transparent 30px, transparent 31px, var(--hero-bg-line1) 31px, var(--hero-bg-line2) 32px, transparent 33px, transparent 90px), /* new vertical line layer */
+    var(--hero-bg-main); /* base color */
   background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0 0, 0 0, 0 0, 0 0;
   transition: background 0.5s ease;
