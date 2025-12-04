@@ -226,11 +226,12 @@ header.scrolled {
   color: #042027;
 }
 .subscribe-btn {
-  padding: 9px 12px;
+  padding: 12px 15px;
   font-family: 'Nunito Sans', system-ui, sans-serif;
   color: inherit;
   margin: 10px;
-  margin-left: -1px;
+  margin-top: 10px;
+  margin-left: 0px;
   text-decoration: none;
   border: 1px solid var(--glass-border);
   border-radius: 10px;
