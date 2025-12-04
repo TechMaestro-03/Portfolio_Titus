@@ -42,20 +42,34 @@ function initializePortfolio() {
 // COMPONENT INITIALIZATION
 // =========================
 
-// 1. Preloader
+// 1. Preloader with Time Display & Smooth Exit
 function initPreloader() {
     const loader = document.getElementById('loader');
+    const loaderTime = document.getElementById('loader-time');
+    let counter = 0; // seconds counter
+
+    // Update time every second
+    const timer = setInterval(() => {
+        counter++;
+        if (loaderTime) loaderTime.textContent = `Loading... ${counter}s`;
+    }, 1000);
+    
     if (loader) {
         window.addEventListener('load', function() {
+
             setTimeout(function() {
-                loader.style.opacity = '0';
+                loader.classList.add('fade-out');
+
                 setTimeout(function() {
                     loader.style.display = 'none';
-                }, 500);
-            }, 800);
+                    clearInterval(timer);
+                }, 800);
+
+            }, 1500); // Increase timeout to show timer longer
         });
     }
 }
+
 
 // 2. Progress Bar
 function initProgressBar() {
@@ -444,98 +458,114 @@ function initStatsCounter() {
 
     statsObserver.observe(statsContainer);
 }
-
-// 14. Project Modals
+/* ===========================
+   14. PROJECT MODAL
+=========================== */
 function initProjectModals() {
-    const modal = document.getElementById('project-modal');
-    const modalInner = document.getElementById('modal-inner');
-    const modalClose = document.getElementById('modal-close');
-    const openModalButtons = document.querySelectorAll('.open-modal');
-    
+    const modal = document.getElementById("project-modal");
+    const modalInner = document.getElementById("modal-inner");
+    const modalClose = document.getElementById("modal-close");
+    const openModalButtons = document.querySelectorAll(".open-modal");
+
     if (!modal || !modalInner) return;
-    
-    function closeModal() {
-        modal.classList.remove('open');
-        document.body.style.overflow = 'auto';
-        modal.setAttribute('aria-hidden', 'true');
+
+    function openProjectModal() {
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+        modal.setAttribute("aria-hidden", "false");
     }
-    
-    function openModal() {
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        modal.setAttribute('aria-hidden', 'false');
-        modal.focus();
+
+    function closeProjectModal() {
+        modal.classList.remove("open");
+        document.body.style.overflow = "auto";
+        modal.setAttribute("aria-hidden", "true");
     }
-    
-    // Open modal
-    openModalButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const projectData = JSON.parse(this.getAttribute('data-project'));
-            
+
+    // Open modal dynamically
+    openModalButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const projectData = JSON.parse(btn.getAttribute("data-project"));
+
             modalInner.innerHTML = `
+                <button id="projectCloseBtn" class="modal-close"><i class="fas fa-times"></i></button>
                 <h2>${projectData.title}</h2>
                 <img src="${projectData.img}" alt="${projectData.title}" loading="lazy">
                 <p>${projectData.desc}</p>
+
                 <div class="project-details">
                     <h3>Project Details</h3>
                     <p>More information about this project would go here...</p>
                 </div>
+
                 <div class="modal-actions">
-                    <a href="${projectData.repo}" class="btn" target="_blank" rel="noopener">
+                    <a href="${projectData.repo}" class="btn" target="_blank">
                         <i class="fab fa-github"></i> View Code
                     </a>
-                    <a href="${projectData.demo}" class="btn outline" target="_blank" rel="noopener">
+                    <a href="${projectData.demo}" class="btn outline" target="_blank">
                         <i class="fas fa-external-link-alt"></i> Live Demo
                     </a>
                 </div>
             `;
-            
-            openModal();
+
+            openProjectModal();
+
+            // Attach close to newly injected button
+            document.getElementById("projectCloseBtn").onclick = closeProjectModal;
         });
     });
-    
-    // Close modal events
-    if (modalClose) {
-        modalClose.addEventListener('click', closeModal);
+
+    // Close (Default top X button)
+    if (modalClose) modalClose.onclick = closeProjectModal;
+
+    // Close by clicking overlay
+    modal.addEventListener("click", e => {
+        if (e.target === modal) closeProjectModal();
+    });
+
+    // Close with ESC
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && modal.classList.contains("open")) closeProjectModal();
+    });
+}
+
+
+/* ===========================
+   ABOUT MODAL
+=========================== */
+
+function initAboutModal() {
+    const aboutModal = document.getElementById("aboutModal");
+    const openBtn = document.getElementById("openAboutModal");
+    const closeBtn = aboutModal.querySelector(".modal-close");
+
+    function openAbout() {
+        aboutModal.classList.add("show");
+        document.body.style.overflow = "hidden";
     }
-    
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            closeModal();
-        }
+
+    function closeAbout() {
+        aboutModal.classList.remove("show");
+        document.body.style.overflow = "auto";
+    }
+
+    openBtn.addEventListener("click", openAbout);
+    closeBtn.addEventListener("click", closeAbout);
+
+    // Outside click
+    aboutModal.addEventListener("click", e => {
+        if (e.target === aboutModal) closeAbout();
     });
-    
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal.classList.contains('open')) {
-            closeModal();
-        }
+
+    // ESC Key
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape") closeAbout();
     });
 }
-const aboutModal = document.getElementById("aboutModal");
-const openBtn = document.getElementById("openAboutModal");
-const closeBtn = document.querySelector(".modal-close");
 
-// Open Modal
-openBtn.addEventListener("click", () => {
-  aboutModal.classList.add("show");
-  document.body.style.overflow = "hidden"; // prevent background scroll
-});
 
-// Close Modal
-closeBtn.addEventListener("click", closeModal);
-aboutModal.addEventListener("click", e => {
-  if (e.target === aboutModal) closeModal(); // click outside to close
-});
-
-// Close with ESC key
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeModal();
-});
-
-function closeModal() {
-  aboutModal.classList.remove("show");
-  document.body.style.overflow = "auto";
-}
+// ===================== Init all =====================
+initProjectModals();
+initAboutModal();
 
 
 
