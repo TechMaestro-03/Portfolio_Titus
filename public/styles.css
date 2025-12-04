@@ -1664,6 +1664,12 @@ footer .container {
   .logo i {
     font-size: 18px;
   }
+  .hero {
+    flex-direction: column;
+    text-align: left;
+    padding: 30px 50px;
+  }
+
 
   .hero h1 {
     font-size: 2rem;
