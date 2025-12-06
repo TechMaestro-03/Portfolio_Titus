@@ -702,7 +702,7 @@ header.scrolled {
 
 /* === SECTIONS === */
 section {
-  padding: 60px 0px;
+  padding: 60px 30px;
   min-height: 10vh;
   margin: 0 auto;
   scroll-margin-top: 0px; /* adjust size to match your navbar height */
@@ -1412,10 +1412,12 @@ section {
 
 .contact-grid {
   max-width: 1150px;
-  margin: 0 auto 10px;
+  margin: 0px auto;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 32px;
+  padding: 20px 30px;
+
 }
 
 .contact-info,
