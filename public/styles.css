@@ -7,36 +7,40 @@
   --bg: #ffffff;
   --card: rgba(255, 255, 255, 0.04);
   --glass: rgba(255, 255, 255, 0.06);
-  --accent: #d47318;
+   --accent: #60a5fa;
   --muted: #2e3f63;
   --glass-border: rgba(5, 5, 5, 0.08);
-  --light-bg: #575757;
+  --light-bg: #000000;
   --light-text: #747474;
   --transition: all 0.3s ease;
-  --font-heading: "DM Serif Display", serif;
+  --font-heading: "DM Sans", sans-serif;
   --font-body:"DM Sans", sans-serif;
   --hero-bg-main: #ffffff;
   --hero-bg-dot1: rgb(190, 190, 209);
   --hero-bg-dot2: rgb(192, 193, 199);
   --hero-bg-line1: #e4e4e4;
   --hero-bg-line2: #a4a4a4;
-  --skill-light: #beab52;  /* normal mode color */
+   --title-line-light: #7ab5f8;   /* light mode */
+  --skill-light: #06182e;;  /* normal mode color */
+  --skill-border: #e6e6e6;
 }
 
 [data-theme="dark"] {
   --bg: var(--light-bg);
-  --card: #292828;
+  --card: rgba(255, 255, 255, 0.05);
   --glass: rgba(58, 57, 57, 0.8);
   --accent: #3930b1;
-  --muted: #a3a3a3;
+  --muted: #c2c1c1;
   --glass-border: rgba(13, 17, 23, 0.06);
-  --light-text: #747474;
+  --light-text: #aaaaaa;
   --hero-bg-main: #000000;
   --hero-bg-dot1: #33334d;
   --hero-bg-dot2: #444466;
   --hero-bg-line1: #343438;
+  --skill-border: #444141;
   --hero-bg-line2: #242427;
-  --skill-light: #7977aa; /* becomes white in dark mode */
+  --skill-light: #5f5f5f; /* becomes white in dark mode */
+  --title-line-light: #ffffff;   /* becomes white in dark mode */
 }
 
 /* === GLOBAL STYLES === */
@@ -721,7 +725,7 @@ section {
 }
 
 .section-title {
-  font-size: 22px;
+  font-size: 26px;
   color: var(--accent);
   text-align: center;
   margin-bottom: 18px;
@@ -903,7 +907,6 @@ section {
     font-size: 0.8rem;
   }
 }
-
 /* === SKILLS & SERVICES === */
 .section-title::after {
   content: "";
@@ -911,34 +914,46 @@ section {
   width: 70px;
   height: 3px;
   margin: 10px auto 0;
-  background: linear-gradient(90deg, #f7f312, var(--accent));
+  background: linear-gradient(
+    90deg, 
+    var(--title-line-light), 
+    var(--accent)
+  );
 }
 
+/* GRID LAYOUT */
 .skills-grid,
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
   margin: 20px 0 10px;
   justify-items: center;
 }
 
+/* SKILL CARD */
 .skill-category {
   width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgb(243, 218, 204);
+  border: 1px solid var(--skill-border);
   border-radius: 16px;
   backdrop-filter: blur(12px);
   text-align: center;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 4, 46, 0.85) 12%,
+    #b1d0f7 100%
+  );
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* SHIMMER EFFECT */
 .skill-category::before {
   content: '';
   position: absolute;
@@ -946,7 +961,12 @@ section {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.1), transparent);
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.15), 
+    transparent
+  );
   transition: left 0.6s ease;
 }
 
@@ -956,50 +976,54 @@ section {
 
 .skill-category:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.15);
+  box-shadow: 0 10px 25px rgba(96, 165, 250, 0.2);
   border-color: var(--accent);
 }
 
+/* CARD TITLE */
 .skill-category h3 {
   font-size: 18px;
   font-weight: 600;
-  color: var(--accent);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .skill-category h3 i {
-  font-size: 20px;
+  font-size: 18px;
   opacity: 0.9;
 }
 
+/* SKILL BARS */
 .skill-bars {
   width: 100%;
-  margin-top: 0;
 }
 
 .skill-bar {
   height: 12px;
-  background: #cfcff1;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 999px;
   overflow: hidden;
   position: relative;
-  margin-top: 0;
 }
+
 .skill-bar > span {
   display: block;
   height: 100%;
   width: 0%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--skill-light)); /* ← use variable */
+  background: linear-gradient(
+    90deg, 
+    var(--skill-light), 
+    var(--accent)
+  );
   position: relative;
   transition: width 1.5s ease-in-out;
-  box-shadow: 0 0 10px rgba(194, 111, 70, 0.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
-
 
 .skill-bar > span::after {
   content: '';
@@ -1008,7 +1032,12 @@ section {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent
+  );
   animation: shimmer 2s infinite;
 }
 
@@ -1017,6 +1046,7 @@ section {
   100% { left: 100%; }
 }
 
+/* PERCENT LABEL */
 .skill-percent {
   position: absolute;
   right: 8px;
@@ -1025,7 +1055,7 @@ section {
   font-size: 11px;
   font-weight: 600;
   color: #ffffff;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: opacity 0.3s ease 0.5s;
 }
@@ -1034,22 +1064,24 @@ section {
   opacity: 1;
 }
 
+/* TECHNOLOGIES TEXT */
 .skill-tech {
-  margin-top: 10px;
-  font-size: 10px;
+  margin-top: 8px;
+  font-size: 12px;
   font-weight: 500;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
   line-height: 1.4;
 }
 
+/* LEVEL TEXT */
 .skill-level {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 6px;
   font-size: 11px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .skill-level-start,
@@ -1057,6 +1089,7 @@ section {
   font-weight: 600;
 }
 
+/* ANIMATION */
 .skill-bar.animating > span {
   animation: pulse 2s ease-in-out infinite;
 }
@@ -1065,6 +1098,9 @@ section {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.8; }
 }
+
+
+
 
 .service-card {
   width: 100%;
@@ -1088,9 +1124,11 @@ section {
 }
 
 .service-card p {
-  margin-top: 8px;
-  font-size: 14px;
-  color: var(--muted);
+  margin-top: 3px;
+  font-size: 0.8rem;
+  color: var(--light-text);
+  text-align: center;        /* makes edges smooth and even */
+  padding: 5px 0;
 }
 
 .service-icon {
@@ -1207,7 +1245,7 @@ section {
 }
 
 .timeline-date {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--accent);
   opacity: 0.85;
