@@ -20,6 +20,7 @@
   --hero-bg-dot2: rgb(192, 193, 199);
   --hero-bg-line1: #e4e4e4;
   --hero-bg-line2: #a4a4a4;
+  --skill-light: #beab52;  /* normal mode color */
 }
 
 [data-theme="dark"] {
@@ -35,6 +36,7 @@
   --hero-bg-dot2: #444466;
   --hero-bg-line1: #343438;
   --hero-bg-line2: #242427;
+  --skill-light: #7977aa; /* becomes white in dark mode */
 }
 
 /* === GLOBAL STYLES === */
@@ -208,7 +210,6 @@ header.scrolled {
 
 .nav-links a:hover {
   color: white;
-  text-decoration: underline;
 
 }
 
@@ -258,7 +259,7 @@ header.scrolled {
   padding: 15px 10px;
   font-family: "DM Sans", sans-serif;
   color: inherit;
-  background-color: var(--bg);
+  background-color:white;
   margin: 10px;
   text-decoration: none;
   border: 1px solid var(--glass-border);
@@ -389,8 +390,11 @@ header.scrolled {
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
   border-radius: 14px;
-  color: black;
   animation: fadeUp 0.35s ease;
+  font-size: 0.8rem;
+  color: var(--light-text);
+  line-height: 1.5;
+  text-align: justify;        /* makes edges smooth and even */
 }
 
 .modal-content h3 {
@@ -594,7 +598,7 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-top: 80px;
+  margin-top: 75px;
   background: 
     radial-gradient(var(--hero-bg-dot1) 3px, transparent 4px),
     radial-gradient(var(--hero-bg-dot2) 3px, transparent 4px),
@@ -985,17 +989,17 @@ section {
   position: relative;
   margin-top: 0;
 }
-
 .skill-bar > span {
   display: block;
   height: 100%;
   width: 0%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), #beab52);
+  background: linear-gradient(90deg, var(--accent), var(--skill-light)); /* ← use variable */
   position: relative;
   transition: width 1.5s ease-in-out;
   box-shadow: 0 0 10px rgba(194, 111, 70, 0.3);
 }
+
 
 .skill-bar > span::after {
   content: '';
