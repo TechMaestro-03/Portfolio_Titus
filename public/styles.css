@@ -208,6 +208,8 @@ header.scrolled {
 
 .nav-links a:hover {
   color: white;
+  text-decoration: underline;
+
 }
 
 .resume-btn {
@@ -806,7 +808,7 @@ section {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding: 3px 5px;
+  padding: 5px 5px;
   font-size: 0.6rem;
   color: #ffffff;
   background: var(--accent);
