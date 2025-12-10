@@ -931,7 +931,8 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
-  margin: 20px 0 10px;
+  margin: 20px auto;
+  margin-bottom: 25px;
   justify-items: center;
 }
 
