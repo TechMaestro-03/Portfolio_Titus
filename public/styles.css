@@ -368,7 +368,9 @@ header.scrolled {
 
 .about-text p {
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.5;
+  text-align: center;
+ 
 }
 
 /* === MODAL === */
