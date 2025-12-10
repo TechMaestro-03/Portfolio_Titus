@@ -452,7 +452,7 @@ header.scrolled {
 .tech-stack-container {
   width: 100%;
   max-width: 1100px;
-  margin: 100px auto 0;
+  margin: 70px auto;
   overflow: hidden;
   position: relative;
 }
@@ -1142,6 +1142,7 @@ section {
 @media screen and (max-width: 768px) {
   .skills-grid,
   .services-grid {
+
     grid-template-columns: 1fr;
   }
   
@@ -1302,7 +1303,22 @@ section {
 }
 /* For tablets and mobile */
 @media screen and (max-width: 768px) {
-  .tech-stack-container.testimonial-card,.service-card,.skill-category,.project-card,.service-card {
+  .tech-stack-container{
+      margin-top: 30px;
+  }
+}
+
+/* For very small mobile screens */
+@media screen and (max-width: 480px) {
+  .tech-stack-container{
+      margin-top: 30px;
+  }
+}
+
+
+/* For tablets and mobile */
+@media screen and (max-width: 768px) {
+  .tech-stack-container,.testimonial-card,.service-card,.skill-category,.project-card,.service-card {
       width: 95%;  /* reduced from 95% */
       margin: 10px auto;
       padding: 15px 12px;
