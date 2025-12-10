@@ -1306,7 +1306,7 @@ section {
 }
 /* For tablets and mobile */
 @media screen and (max-width: 768px) {
-  .project-card,.service-card {
+  .tech-stack-container.testimonial-card,.service-card,.skill-category,.project-card,.service-card {
       width: 95%;  /* reduced from 95% */
       margin: 10px auto;
       padding: 15px;
@@ -1315,7 +1315,7 @@ section {
 
 /* For very small mobile screens */
 @media screen and (max-width: 480px) {
-  .project-card,.service-card {
+  .tech-stack-container,.testimonial-card,.service-card,.skill-category,.project-card,.service-card {
       width: 90%;   /* reduced from 90% */
       margin: 8px auto;
       padding: 10px;
