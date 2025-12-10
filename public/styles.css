@@ -466,8 +466,8 @@ header.scrolled {
 }
 
 .tech-stack-item {
-  min-width: 100px;
-  padding: 16px;
+  min-width: 70px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -479,7 +479,7 @@ header.scrolled {
 }
 
 .tech-stack-item i {
-  font-size: 32px;
+  font-size: 30px;
   color: var(--accent);
   margin-bottom: 8px;
   margin-top: 30px;
