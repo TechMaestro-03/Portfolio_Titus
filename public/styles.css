@@ -1250,7 +1250,7 @@ section {
 }
 
 .timeline-item h3 {
-  font-size: 1.1rem;
+  font-size: 14px;
   font-weight: 700;
   margin-bottom: 8px;
   color: var(--text);
