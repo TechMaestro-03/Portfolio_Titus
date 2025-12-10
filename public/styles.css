@@ -391,7 +391,7 @@ header.scrolled {
 .modal-content {
   width: min(480px, 90%);
   padding: 26px;
-  background: white;
+  background: var(--card);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
   border-radius: 14px;
