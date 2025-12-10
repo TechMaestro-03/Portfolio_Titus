@@ -1305,7 +1305,7 @@ section {
   .tech-stack-container.testimonial-card,.service-card,.skill-category,.project-card,.service-card {
       width: 95%;  /* reduced from 95% */
       margin: 10px auto;
-      padding: 15px;
+      padding: 15px 12px;
   }
 }
 
@@ -1314,9 +1314,10 @@ section {
   .tech-stack-container,.testimonial-card,.service-card,.skill-category,.project-card,.service-card {
       width: 90%;   /* reduced from 90% */
       margin: 8px auto;
-      padding: 10px;
+      padding: 12px 15px;
   }
 }
+
 
 
 /* === TESTIMONIALS === */
