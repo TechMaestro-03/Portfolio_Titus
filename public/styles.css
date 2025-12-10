@@ -746,7 +746,7 @@ section {
 .project-card {
   width: 100%;
   max-width: 100%;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1306,8 +1306,8 @@ section {
 }
 /* For tablets and mobile */
 @media screen and (max-width: 768px) {
-  .card {
-      width: 75%;  /* reduced from 95% */
+  .project-card,.service-card {
+      width: 95%;  /* reduced from 95% */
       margin: 10px auto;
       padding: 15px;
   }
@@ -1315,10 +1315,10 @@ section {
 
 /* For very small mobile screens */
 @media screen and (max-width: 480px) {
-  .card {
-      width: 70%;   /* reduced from 90% */
+  .project-card,.service-card {
+      width: 90%;   /* reduced from 90% */
       margin: 8px auto;
-      padding: 100px;
+      padding: 10px;
   }
 }
 
