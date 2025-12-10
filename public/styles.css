@@ -743,10 +743,10 @@ section {
 .project-card {
   width: 100%;
   max-width: 100%;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 5px;
   align-items: flex-start;    /* aligns text neatly */
   background: var(--card);
   border: none;
