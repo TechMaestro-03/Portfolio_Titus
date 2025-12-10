@@ -177,7 +177,7 @@ function initTechCarousel() {
     if (!track) return;
   
     let scrollAmount = 0;
-    const scrollSpeed = 1; // pixels per frame
+    const scrollSpeed = 3; // pixels per frame
   
     function scrollTech() {
         scrollAmount += scrollSpeed;
