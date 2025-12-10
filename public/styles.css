@@ -1318,7 +1318,7 @@ section {
   .card {
       width: 70%;   /* reduced from 90% */
       margin: 8px auto;
-      padding: 10px;
+      padding: 100px;
   }
 }
 
