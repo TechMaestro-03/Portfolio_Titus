@@ -735,7 +735,7 @@ section {
 /* === PROJECTS === */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 32px;
   margin: 24px 0 10px;
 }
@@ -743,10 +743,10 @@ section {
 .project-card {
   width: 100%;
   max-width: 100%;
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
   align-items: flex-start;    /* aligns text neatly */
   background: var(--card);
   border: none;
@@ -841,11 +841,10 @@ section {
 
 .project-description {
   font-size: 0.8rem;
-  color: var(--light-text);
+  color: var(--muted);
   line-height: 1.5;
   text-align: justify;        /* makes edges smooth and even */
   margin-top: 0px;           /* spacing from title */
-  max-width: 95%;             /* keeps text from going edge-to-edge */
   padding: 5px 0;
 }
 
