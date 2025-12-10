@@ -1268,7 +1268,7 @@ section {
     width: calc(100% - 60px);
     left: 40px !important;
     margin-left: 0;
-    padding: 28px 24px;
+    padding: 10px 24px;
   }
 
   .timeline-item::before {
@@ -1295,9 +1295,9 @@ section {
 
 @media (max-width: 330px) {
   .timeline-item {
-    width: calc(100% - 30px);
+    width: calc(100% - 20px);
     left: 25px !important;
-    padding: 20px 18px;
+    padding: 15px 12px;
   }
 }
 /* For tablets and mobile */
