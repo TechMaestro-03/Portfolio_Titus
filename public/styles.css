@@ -20,8 +20,8 @@
   --hero-bg-dot2: rgb(192, 193, 199);
   --hero-bg-line1: #e4e4e4;
   --hero-bg-line2: #a4a4a4;
-   --title-line-light: #7ab5f8;   /* light mode */
-  --skill-light: #06182e;;  /* normal mode color */
+   --title-line-light: #c06a24;   /* light mode */
+  --skill-light: #ffffff;;  /* normal mode color */
   --skill-border: #e6e6e6;
 }
 
@@ -949,11 +949,7 @@ section {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  background: linear-gradient(
-    180deg,
-    rgba(4, 4, 46, 0.85) 12%,
-    #b1d0f7 100%
-  );
+  background:#222877;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -968,7 +964,7 @@ section {
   background: linear-gradient(
     90deg, 
     transparent, 
-    rgba(255, 255, 255, 0.15), 
+    rgba(94, 10, 10, 0.15), 
     transparent
   );
   transition: left 0.6s ease;
@@ -1007,11 +1003,12 @@ section {
 }
 
 .skill-bar {
-  height: 12px;
-  background: rgba(255, 255, 255, 0.2);
+  height: 10px;
+  background: rgb(207, 220, 253);
   border-radius: 999px;
   overflow: hidden;
   position: relative;
+  opacity: 3.0; /* lower = less visible */
 }
 
 .skill-bar > span {
@@ -1019,11 +1016,7 @@ section {
   height: 100%;
   width: 0%;
   border-radius: 999px;
-  background: linear-gradient(
-    90deg, 
-    var(--skill-light), 
-    var(--accent)
-  );
+  background: white;
   position: relative;
   transition: width 1.5s ease-in-out;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
@@ -1039,7 +1032,7 @@ section {
   background: linear-gradient(
     90deg, 
     transparent, 
-    rgba(255, 255, 255, 0.4), 
+    rgba(2, 1, 19, 0.4), 
     transparent
   );
   animation: shimmer 2s infinite;
