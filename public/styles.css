@@ -789,6 +789,7 @@ section {
   gap: 5px;
   align-items: flex-start;    /* aligns text neatly */
   background: var(--card);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border: none;
   border-radius: 20px;
   backdrop-filter: blur(12px);
