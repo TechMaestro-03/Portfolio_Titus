@@ -289,8 +289,8 @@ header.scrolled {
   cursor: pointer;
   color: var(--accent);
   background: white;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 4px 8px ;
+  border-radius: 10px;
   transition: 0.3s ease;
 }
 
@@ -324,10 +324,13 @@ header.scrolled {
     font-size: 0.9rem;
     text-align: left;
   }
+  #dark-mode-toggle {
+    display: block;
+  }
 
   #downloadcv,
-  #search-toggle,
-  #dark-mode-toggle {
+  #search-toggle
+  {
     display: none;
   }
 }
