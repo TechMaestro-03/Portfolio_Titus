@@ -1083,21 +1083,22 @@ section {
   0% { left: -100%; }
   100% { left: 100%; }
 }
+.percent {
+  position: absolute;
+  right: 12px;            /* slightly inside, not touching the edge */
+  top: 40px;           /* closer to the bar for better visibility */
+  font-size: 10px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 1px 1px;     /* makes it readable */
+  z-index: 20;
+}
 
 /* ===========================
    PERCENT LABEL (YOUR FIX)
 =========================== */
 .skill-percent {
-  position: absolute;
-  left: 4px;            /* slightly inside, not touching the edge */
-  top: -14px;           /* closer to the bar for better visibility */
-  font-size: 9px;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.35);   /* subtle contrast */
-  padding: 1px 2px;     /* makes it readable */
-  border-radius: 40px;   /* clean pill shape */
-  backdrop-filter: blur(2px);
-  z-index: 20;
+  opacity: 0;
 }
 
 /* ===========================
