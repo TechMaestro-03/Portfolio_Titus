@@ -1086,7 +1086,7 @@ section {
 .percent {
   position: absolute;
   right: 12px;            /* slightly inside, not touching the edge */
-  top: 40px;           /* closer to the bar for better visibility */
+  top: 38px;           /* closer to the bar for better visibility */
   font-size: 10px;
   font-weight: 500;
   color: #ffffff;
