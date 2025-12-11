@@ -988,10 +988,10 @@ section {
 =========================== */
 .skill-category {
   width: 100%;
-  padding: 20px;
+  padding: 18px 10px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   border: 1px solid var(--skill-border);
   border-radius: 16px;
   backdrop-filter: blur(12px);
@@ -1101,7 +1101,7 @@ section {
 .percent {
   position: absolute;
   right: 12px;            /* slightly inside, not touching the edge */
-  top: 38px;           /* closer to the bar for better visibility */
+  top: 42px;           /* closer to the bar for better visibility */
   font-size: 10px;
   font-weight: 500;
   color: #ffffff;
@@ -1829,7 +1829,7 @@ footer .container {
   }
 
   .stats-container {
-    gap: 30px;
+    gap: 15px;
     margin-top: 30px;
   }
 
