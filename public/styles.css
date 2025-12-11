@@ -228,6 +228,18 @@ header.scrolled {
   border-radius: 10px;
   transition: var(--transition);
 }
+.toggle-themebutton{
+  padding: 8px 12px;
+  color: white;
+  font-family: "DM Sans", sans-serif;;
+  margin: 10px;
+  font-size: 18px;
+  background-color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  transition: var(--transition);
+}
 
 .resume-btn:hover {
   background: var(--accent);
