@@ -688,6 +688,7 @@ header.scrolled {
 
 .hero h1 {
   font-size: 45px;
+  font-weight: bolder;
   margin-bottom: 8px;
 }
 
