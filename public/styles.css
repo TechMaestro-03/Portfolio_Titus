@@ -54,14 +54,18 @@ html {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   color: var(--muted);
   background: var(--bg);
   font-size: 14px;
+  overflow-x: hidden;
+
+  padding-top: 80px; /* adjust for your fixed header */
   font-family: "DM Sans", sans-serif;;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -470,20 +474,21 @@ header.scrolled {
   width: 100%;
   max-width: 1100px;
   margin: 70px auto;
-  overflow: hidden;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .tech-stack-track {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   white-space: nowrap;
   transform: translateX(0);
-  transition: transform 0.3s ease;
+  transition: transform 10s ease;
 }
 
 .tech-stack-item {
-  min-width: 80px;
+  min-width: 100px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -532,6 +537,7 @@ header.scrolled {
 .stat-item .icon {
   width: 40px;
   height: 20px;
+  font-weight: 700;
   margin-bottom: 10px;
   color: var(--accent); 
 }
@@ -638,13 +644,12 @@ header.scrolled {
 /* === HERO SECTION === */
 .hero {
   width: 100%;
-  min-height: 50vh;
-  padding: 100px 100px 100px;
+  min-height: auto;
+  padding: 100px 100px 0px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-top: 75px;
   background: 
     radial-gradient(var(--hero-bg-dot1) 3px, transparent 4px),
     radial-gradient(var(--hero-bg-dot2) 3px, transparent 4px),
