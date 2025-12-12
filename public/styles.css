@@ -484,7 +484,7 @@ header.scrolled {
   gap: 25px;
   white-space: nowrap;
   transform: translateX(0);
-  transition: transform 10s ease;
+  transition: transform 0.5s ease;
 }
 
 .tech-stack-item {
