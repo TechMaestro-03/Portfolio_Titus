@@ -8,6 +8,16 @@
   <meta name="keywords" content="titus,mboya,web development, machine learning, full stack, Kenya">
   <title>T.K Mboya — Portfolio</title>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWBMM144W4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SWBMM144W4');
+    </script>
+
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +32,6 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="public/styles.css">
 
-  
 </head>
 <body>
   <!-- Progress bar -->
@@ -149,7 +158,13 @@
 
       <div style="display:flex;align-items:center;gap:10px">
         <button id="search-toggle" class="resume-btn" data-tooltip="Search (Press /)" aria-label="Search"><i class="fas fa-search"></i></button>
-        <a href="public/documents/Titus_Mboya_ComputerSciCV.pdf" id="downloadcv" class="cv-btn" data-tooltip="Download CV" role="button">Download CV <i class="fas fa-download" style="margin-left:8px"></i></a>
+        <a href="public/documents/Titus_Mboya_ComputerSciCV.pdf"
+          id="downloadcv"
+          class="cv-btn"
+          data-tooltip="Download CV"
+          role="button">
+          Download CV <i class="fas fa-download" style="margin-left:8px"></i>
+        </a>
         <button id="dark-mode-toggle" class="toggle-themebutton" aria-pressed="false" title="Toggle theme"> <i class="fas fa-moon"></i></button>
         <div class="menu-toggle" id="menu-toggle" aria-label="Open menu" tabindex="0"><i class="fas fa-bars"></i></div>
       </div>
@@ -235,10 +250,6 @@
 
 </div>
 
-
-
-            
-          
           </div>
           <!-- Floating Quick Info Button -->
             <div class="quick-info-wrapper">
@@ -672,6 +683,11 @@
           <div class="contact-form">
             <h3>Send Me a Message</h3>
             <form id="contactForm" action="https://formspree.io/f/xjkgnogd" method="POST">
+              <!-- Email formatting -->
+              <input type="hidden" name="_subject" value="📩 New Portfolio Contact Message">
+              <input type="hidden" name="_template" value="table">
+          
+
               <div class="form-group">
                 <label for="name">Your Name</label>
                 <input id="name" name="name" placeholder="Enter your full name" class="form-control" required />
@@ -718,6 +734,8 @@
             <a href="https://instagram.com/tec_hmaestro" class="social-link"><i class="fab fa-instagram"></i></a>
         </div>
         <p class="copyright">© 2025 Titus .K. Mboya. All Rights Reserved.</p>
+        This site uses Google Analytics to understand visitor behavior.
+
     </div>
     
 </footer>
@@ -769,6 +787,23 @@
 <script>
   lucide.createIcons();
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cvBtn = document.getElementById("downloadcv");
+
+    if (cvBtn) {
+      cvBtn.addEventListener("click", function () {
+        gtag('event', 'download', {
+          event_category: 'CV',
+          event_label: 'Titus_Mboya_ComputerSciCV',
+          value: 1
+        });
+      });
+    }
+  });
+</script>
+
   
 
   <!-- Libraries -->

@@ -1170,3 +1170,25 @@ if (document.readyState === 'loading') {
 } else {
     initializePortfolio();
 }
+
+cvBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+  
+    gtag('event', 'download', {
+      event_category: 'CV',
+      event_label: 'Titus_Mboya_ComputerSciCV',
+      event_callback: function () {
+        window.location.href = cvBtn.href;
+      }
+    });
+  });
+
+  document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", e => {
+  if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+    e.preventDefault();
+  }
+});
+
+  
