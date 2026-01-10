@@ -1418,12 +1418,12 @@ section {
   }
 
   .tech-stack-item i {
-    font-size: 14px;
+    font-size: 18px;
     margin: 4px 0;
   }
 
   .tech-stack-item span {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .tech-stack-track {
