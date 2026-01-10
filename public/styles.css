@@ -54,6 +54,7 @@ html {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   width: 100%;
+  scrollbar-gutter: stable;
   height: auto;
 }
 
@@ -64,6 +65,7 @@ body {
   background: var(--bg);
   font-size: 14px;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
   padding-top: 80px; /* adjust for your fixed header */
   font-family: "DM Sans", sans-serif;;
   transition: background 0.3s ease, color 0.3s ease;
@@ -474,8 +476,10 @@ header.scrolled {
   max-width: 1100px;
   margin: 70px auto;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overflow-y: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+
 }
 
 .tech-stack-track {
@@ -644,11 +648,12 @@ header.scrolled {
 .hero {
   width: 100%;
   min-height: auto;
-  padding: 100px 100px 0px;
+  padding: clamp(40px, 6vw, 100px) clamp(20px, 6vw, 100px) 0;
   margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 40px;
+  overflow-x: hidden;
   background: 
     radial-gradient(var(--hero-bg-dot1) 3px, transparent 4px),
     radial-gradient(var(--hero-bg-dot2) 3px, transparent 4px),
@@ -1233,7 +1238,7 @@ section {
 
 .timeline-item {
   position: relative;
-  width: 50%;
+  width: calc(50% - 40px);
   padding: 20px 30px;
   margin: 20px 0;
   background: rgba(255, 255, 255, 0.05);
@@ -1249,7 +1254,7 @@ section {
 }
 
 .timeline-item:nth-child(odd) {
-  left: -1%;
+  left: 2.5%;
 }
 
 .timeline-item:nth-child(even) {
@@ -1468,6 +1473,12 @@ section {
   color: #f5f5f5;
   margin-bottom: 18px;
 }
+#testimonials,
+#contact {
+  overflow-x: hidden;
+  position: relative;
+}
+
 
 /* === CONTACT === */
 #contact {
@@ -1746,8 +1757,11 @@ footer .container {
   border: 2px solid var(--accent);
   border-radius: 50%;
   pointer-events: none;
+  will-change: transform;
   transform: translate(-50%, -50%);
   z-index: 99999;
+  left: 0;
+  top: 0;
   transition: transform 0.12s ease, background-color 0.12s;
 }
 
@@ -1759,8 +1773,8 @@ footer .container {
 
   .nav-links {
     position: fixed;
-    right: 0.5;
-    top: 0.5;
+    right: 0;
+    top: 0;
     width: 200px;
     height: 300px;
     border-radius: 0px 0px 10px 10px;

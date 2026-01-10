@@ -1190,5 +1190,9 @@ document.addEventListener("keydown", e => {
     e.preventDefault();
   }
 });
+requestAnimationFrame(() => {
+    document.body.style.overflowX = 'hidden';
+  });
+  
 
   
