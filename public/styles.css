@@ -21,6 +21,7 @@
    --title-line-light: #171757;   /* light mode */
   --skill-light: #ffffff;;  /* normal mode color */
   --skill-border: #e6e6e6;
+  --tech-stack-border:var(--accent);
 }
 
 [data-theme="dark"] {
@@ -39,6 +40,8 @@
   --hero-bg-line2: #242427;
   --skill-light: #5f5f5f; /* becomes white in dark mode */
   --title-line-light: #ffffff;   /* becomes white in dark mode */
+  --tech-stack-border:#444141;
+
 }
 
 /* === GLOBAL STYLES === */
@@ -478,13 +481,21 @@ header.scrolled {
   position: relative;
   overflow-x: hidden !important;
   overflow-y: hidden;
-  border: 1px solid rgba(255,255,255,0.15);
+  border-radius:16px;
+  padding: 32px 12px;
+  border: 0.5px solid color-mix(
+  in srgb,
+  var(--tech-stack-border) 30%,
+  transparent
+);
+
+  
 
 }
 
 .tech-stack-track {
   display: flex;
-  gap: 25px;
+  gap: 30px;
   white-space: nowrap;
   transform: translateX(0);
   transition: transform 0.5s ease;
@@ -504,14 +515,14 @@ header.scrolled {
 }
 
 .tech-stack-item i {
-  font-size: 32px;
+  font-size: 30px;
   color: var(--accent);
-  margin-bottom: 8px;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .tech-stack-item span {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--muted);
   text-align: center;
 }
