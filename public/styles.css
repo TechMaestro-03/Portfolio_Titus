@@ -1376,7 +1376,24 @@ section {
       margin: 10px auto;
       padding: 20px 12px;
       margin-top: 30px;
+  }
+  .tech-stack-item {
+    min-width: 80px;
+    padding: 8px;
+    border-radius: 14px;
+  }
 
+  .tech-stack-item i {
+    font-size: 24px;
+    margin: 6px 0;
+  }
+
+  .tech-stack-item span {
+    font-size: 11px;
+  }
+
+  .tech-stack-track {
+    gap: 20px;
   }
 }
 
@@ -1387,7 +1404,24 @@ section {
       margin: 8px auto;
       padding: 12px 15px;
       margin-top: 30px;
+  }
+  .tech-stack-item {
+    min-width: 50px;
+    padding: 6px;
+    border-radius: 12px;
+  }
 
+  .tech-stack-item i {
+    font-size: 20px;
+    margin: 4px 0;
+  }
+
+  .tech-stack-item span {
+    font-size: 9px;
+  }
+
+  .tech-stack-track {
+    gap: 12px;
   }
 }
 
