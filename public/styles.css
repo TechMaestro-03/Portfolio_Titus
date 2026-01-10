@@ -1374,17 +1374,17 @@ section {
   .tech-stack-container,.testimonial-card,.service-card,.skill-category,.project-card,.service-card {
       width: 95%;  /* reduced from 95% */
       margin: 10px auto;
-      padding: 20px 12px;
+      padding: 20px 15px;
       margin-top: 30px;
   }
   .tech-stack-item {
     min-width: 80px;
-    padding: 8px;
+    padding: 18px;
     border-radius: 14px;
   }
 
   .tech-stack-item i {
-    font-size: 24px;
+    font-size: 20px;
     margin: 6px 0;
   }
 
@@ -1402,17 +1402,24 @@ section {
   .tech-stack-container,.testimonial-card,.service-card,.skill-category,.project-card,.service-card {
       width: 90%;   /* reduced from 90% */
       margin: 8px auto;
-      padding: 12px 15px;
+      padding: 18px 15px;
       margin-top: 30px;
   }
+  .tech-stack-container,.skill-category{
+    height: 115px;
+    display: flex;
+  align-items: center;      /* vertical center */
+  justify-content: center;  /* horizontal center */
+
+  }
   .tech-stack-item {
-    min-width: 50px;
-    padding: 6px;
-    border-radius: 12px;
+    min-width: 60px;
+    padding: 18px;
+    border-radius: 14px;
   }
 
   .tech-stack-item i {
-    font-size: 20px;
+    font-size: 14px;
     margin: 4px 0;
   }
 
