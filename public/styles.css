@@ -605,7 +605,7 @@ header.scrolled {
   backdrop-filter: blur(6px);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .stat-item{
     padding:15px 12px ;
   }
