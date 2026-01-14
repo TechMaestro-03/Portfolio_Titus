@@ -780,6 +780,55 @@ header.scrolled {
   transform: translateY(-4px) scale(1.1);
   color: #ffffff;
 }
+/* === Typing Animation Styles === */
+.typing{
+  display: flex;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;;
+  font-size: 1.3rem;
+  gap: 5px; /* space between text and cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.typing {
+  display: inline-block;
+}
+
+/* Blinking cursor */
+.typing::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.8s step-start infinite;
+  color: #545FE5; /* cursor color matches text */
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.1%, 100% { opacity: 0; }
+}
+
+/* Optional: add some entrance fade for typing text */
+.typing-container.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .typing-container { font-size: 1.2rem; }
+}
+
+@media (max-width: 420px) {
+  .typing-container { font-size: 1rem; }
+}
+
 
 .btn {
   display: inline-flex;
