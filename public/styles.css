@@ -1029,6 +1029,10 @@ section {
   gap: 8px;
   margin-top: 6px;
 }
+h3{
+  font-size: 16px;
+  font-weight: 600;
+}
 
 .project-tag {
   font-size: 0.65rem;
