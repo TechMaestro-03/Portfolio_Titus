@@ -53,94 +53,95 @@ crossorigin="anonymous"
 <center>
   <div id="loader">
     <div class="terminal-loader">
-      <!-- Circular loader -->
-      <div class="circular-loader"></div>
-      <div class="text">
-        System.initialize(<span class="blue">'My Portfolio'</span>)
-      </div>
+      Initializing <span class="blue">portfolio</span>…
     </div>
-  </div>
+  </div>  
 </center>
 
 
 <style>
-  /* === Loader Background === */
+  /* === Reset === */
+* {
+  box-sizing: border-box;
+}
+
+/* === CSS Properties for Animation === */
+@property --a {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --h {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+
+/* === Loader Background === */
 #loader {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, #1c1c3a, #161733);
   z-index: 100000;
-  background: linear-gradient(#262645 1px, transparent 1px),
-              linear-gradient(90deg, #262645 1px, transparent 1px),
-              repeating-linear-gradient(
-                45deg,
-                rgba(0, 255, 170, 0.05) 0px 1px,
-                transparent 1px 12px
-              ),
-              repeating-linear-gradient(
-                -45deg,
-                rgba(0, 255, 170, 0.05) 0px 1px,
-                transparent 1px 12px
-              ),
-              radial-gradient(circle at center, #1c1c3a 0%, #161733 100%);
 }
 
-/* Exit Animation */
-#loader.fade-out {
-  opacity: 0;
-  transform: scale(1.1);
-}
-
-/* === Terminal Loader Box === */
+/* === Terminal Loader === */
 .terminal-loader {
-  position: relative;
-  font-family: 'Courier New', monospace;
+  padding: 24px 36px;
+  font-family: "Courier New", monospace;
   font-size: 1.2rem;
+  font-weight: bold;
   color: #cf5728;
-  padding: 20px 30px;
-  border-radius: 10px;
-  border: 1px solid #ffffff;
   text-align: center;
-  max-width: 90vw;
-  box-sizing: border-box;
-  overflow-wrap: break-word;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  border: 0.35rem solid transparent;
+  border-radius: 12px;
+
+  /* Dynamic color */
+  --charge: hsl(var(--h), 80%, 55%);
+
+  border-image: conic-gradient(
+    var(--charge) var(--a),
+    transparent calc(var(--a) + 0.6deg)
+  ) 30;
+
+  animation: terminalSpin 2.5s infinite ease-in-out;
 }
 
-/* Terminal text styling */
-.terminal-loader .text .blue {
-  color: #ffffff; /* highlight text */
+/* Highlight text */
+.terminal-loader .blue {
+  color: #ffffff;
 }
 
-/* === Circular Loader === */
-.circular-loader {
-  width: 40px;
-  height: 40px;
-  border: 4px solid rgba(255, 255, 255, 0.2); /* light track */
-  border-top-color: #ffffff; /* active spinner color */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+/* === Animation === */
+@keyframes terminalSpin {
+  0% {
+    --a: 0deg;
+    --h: 0;
+  }
+  100% {
+    --a: 360deg;
+    --h: 120;
+  }
 }
 
-/* Spin animation */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* === Responsive === */
+@media (max-width: 600px) {
+  .terminal-loader {
+    font-size: 1rem;
+    padding: 18px 24px;
+  }
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) { .terminal-loader { font-size: 1rem; padding: 16px; } }
-@media (max-width: 420px) { .terminal-loader { font-size: 0.9rem; padding: 12px; } }
-@media (max-width: 330px) { .terminal-loader { font-size: 0.8rem; padding: 10px; } }
+@media (max-width: 420px) {
+  .terminal-loader {
+    font-size: 0.9rem;
+    padding: 14px 20px;
+  }
+}
 
 </style>
 
