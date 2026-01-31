@@ -764,7 +764,13 @@ h4{
 
 .hero p {
   color: var(--muted);
-  max-width: 60ch;
+  font-size: 14px;
+  line-height: 1.7;
+  width: 100%;             /* responsive width up to max-width */
+  letter-spacing: 0.3px;
+  text-align: justify;        /* makes edges smooth and even */
+  padding: 0px 0px;
+  display: block;
 }
 
 .hero-socials {
