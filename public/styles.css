@@ -1267,6 +1267,7 @@ h3{
 ======================= */
 .service-card {
   width: 100%;
+  max-width: 500px;               /* control card width */
   position: relative;             /* needed for absolute number */
   padding: 28px 24px;
   display: flex;
@@ -1320,7 +1321,7 @@ h3{
 .service-icon svg {
   width: 24px;
   height: 24px;
-  fill:white;
+  fill:var(--accent);
 }
 
 /* Title */
