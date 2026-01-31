@@ -20,7 +20,7 @@
   --hero-bg-line2: #c7c7c7;
    --title-line-light: #171757;   /* light mode */
   --skill-light: #ffffff;;  /* normal mode color */
-  --skill-border: #e6e6e6;
+  --skill-border:#2a327e;
   --tech-stack-border:var(--accent);
   --card-hover-light:#f3f3f5;
 
