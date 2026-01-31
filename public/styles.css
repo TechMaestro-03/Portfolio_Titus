@@ -291,7 +291,7 @@ header.scrolled {
       0 0 26px rgba(99,102,241,0.6);
 }
 .cv-btn {
-  padding: 15px 10px;
+  padding: 15px 8px;
   font-family: "DM Sans", sans-serif;;
   color: inherit;
   background-color:white;
@@ -491,13 +491,13 @@ header.scrolled {
 /* === TECH STACK === */
 .tech-stack-container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 30px auto;
   position: relative;
   overflow-x: hidden !important;
   overflow-y: hidden;
   border-radius:16px;
-  padding: 32px 12px;
+  padding: 24px 10px;
   border: 0.5px solid color-mix(
   in srgb,
   var(--tech-stack-border) 30%,
@@ -529,11 +529,13 @@ header.scrolled {
 }
 
 .tech-stack-item i {
-  font-size: 30px;
+  font-size: 28px;
   color: var(--accent);
   margin-top: 10px;
+  border-radius: 20px;
   margin-bottom: 10px;
 }
+
 
 .tech-stack-item span {
   font-size: 12px;
@@ -661,6 +663,9 @@ header.scrolled {
   color: var(--muted);
   line-height: 1.5;
 }
+h4{
+  font-size: 18px;
+}
 
 .quick-info-actions {
   display: flex;
@@ -697,7 +702,6 @@ header.scrolled {
   clamp(20px, 6vw, 100px)   /* right */
   0                         /* bottom */
   clamp(60px, 8vw, 160px);  /* left (bigger = push right) */
-
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -880,6 +884,7 @@ section {
   text-align: center;
   font-weight: 500;
   margin-bottom: 30px;
+  letter-spacing: 0.5px;
 
 }
 
@@ -958,6 +963,7 @@ section {
 
 .view-btn {
   left: 14px;
+  
 }
 
 .code-btn {
@@ -1013,7 +1019,8 @@ section {
 .cert-btn {
   display: inline-block;
   margin-top: 8px;
-  font-size: 13px;
+  font-size: 12px;
+  font-style: oblique;
   color: var(--accent);
   text-decoration: none;
   transition: 0.3s ease;
@@ -1027,7 +1034,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 6px;
 }
 h3{
   font-size: 16px;
@@ -1516,6 +1522,7 @@ h3{
   }
   .tech-stack-container,.skill-category{
     height: 115px;
+    width:90%;
     display: flex;
     align-items: center;      /* vertical center */
     justify-content: center;  /* horizontal center */
@@ -2011,6 +2018,8 @@ footer .container {
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+    padding-top: 40px;
   }
 
   .contact-grid {
