@@ -399,21 +399,16 @@ header.scrolled {
   margin-bottom: 16px;
 }
 
-.about-text p {
+.about-text{
   color: var(--muted);
   font-size: 14px;
   line-height: 1.7;
-  max-width: 700px;        /* sets a readable width for large screens */
   width: 100%;             /* responsive width up to max-width */
   letter-spacing: 0.3px;
   text-align: justify;        /* makes edges smooth and even */
   padding: 0px 0px;
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  unicode-bidi: isolate;
+ 
 }
  
 
