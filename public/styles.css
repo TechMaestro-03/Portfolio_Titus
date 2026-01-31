@@ -402,7 +402,7 @@ header.scrolled {
 .about-text{
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.5;
   width: 100%;             /* responsive width up to max-width */
   letter-spacing: 0.3px;
   text-align: justify;        /* makes edges smooth and even */
@@ -765,7 +765,7 @@ h4{
 .hero p {
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.5;
   width: 100%;             /* responsive width up to max-width */
   letter-spacing: 0.3px;
   text-align: justify;        /* makes edges smooth and even */
