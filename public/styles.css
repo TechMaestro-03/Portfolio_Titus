@@ -10,7 +10,7 @@
    --accent: #1f518f;
   --muted: #2e3f63;
   --glass-border: rgba(5, 5, 5, 0.08);
-  --light-bg: #000000;
+  --light-bg: #03031b;
   --light-text: #747474;
   --transition: all 0.3s ease;
   --hero-bg-main: #ffffff;
@@ -32,7 +32,7 @@
   --muted: #c2c1c1;
   --glass-border: rgba(13, 17, 23, 0.06);
   --light-text: #aaaaaa;
-  --hero-bg-main: #000000;
+  --hero-bg-main: #03031b;
   --hero-bg-dot1: #33334d;
   --hero-bg-dot2: #444466;
   --hero-bg-line1: #343438;
@@ -402,7 +402,7 @@ header.scrolled {
 .about-text{
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
   width: 100%;             /* responsive width up to max-width */
   letter-spacing: 0.3px;
   text-align: justify;        /* makes edges smooth and even */
@@ -700,10 +700,11 @@ h4{
   width: 100%;
   min-height: auto;
   padding: 
-  clamp(40px, 6vw, 100px)   /* top */
-  clamp(20px, 6vw, 100px)   /* right */
-  0                         /* bottom */
-  clamp(60px, 8vw, 160px);  /* left (bigger = push right) */
+  clamp(60px, 8vw, 140px)   /* top */
+  clamp(40px, 8vw, 140px)   /* right */
+  clamp(20px, 4vw, 60px)    /* bottom */
+  clamp(80px, 10vw, 180px); /* left */
+
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -765,10 +766,9 @@ h4{
 .hero p {
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
   width: 100%;             /* responsive width up to max-width */
   letter-spacing: 0.3px;
-  text-align: justify;        /* makes edges smooth and even */
   padding: 0px 0px;
   display: block;
 }
@@ -875,7 +875,7 @@ h4{
 
 /* === SECTIONS === */
 section {
-  padding: 30px 10px;
+  padding: 50px 20px;
   margin: 0 auto;
   scroll-margin-top: 0px; /* adjust size to match your navbar height */
   box-sizing: border-box;
@@ -1093,6 +1093,7 @@ h3{
   display: block;
   width: 70px;
   height: 3px;
+  border-radius: 50%;
   margin: 10px auto 0;
   background: linear-gradient(
     90deg, 
@@ -1811,7 +1812,6 @@ h3{
   margin-top: 6px;
   font-family: "DM Sans", sans-serif;;
   font-size: 14px;
-  background: rgba(255,255,255,0.08);
   border: 1px solid rgba(55, 35, 146, 0.18);
   border-radius: 12px;
   outline: none;
