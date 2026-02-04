@@ -45,8 +45,8 @@ const portfolioData = {
     "Meditation & self-improvement"
   ],
   education: [
-    { degree: "BSc in Computer Science", institution: "Maseno University", year: "Expected 2026" },
-    { degree: "High School Diploma", institution: "Garissa High School", year: "2021" }
+    { degree: "BSc in Computer Science", institution: "Maseno University", year: "2025" },
+    { degree: "High School Education", institution: "Kitondo High School", year: "2020" }
   ],
   certifications: [
     "Machine Learning A-Z",

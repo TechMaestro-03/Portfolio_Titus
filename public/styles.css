@@ -2405,15 +2405,16 @@ main, section, .container, .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--accent);
   border: none;
-  color: #fff;
+  background-color: var(--card);
+  color: var(--accent);
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .chatbot-toggle:hover {
   transform: scale(1.1);
@@ -2485,13 +2486,17 @@ main, section, .container, .wrapper {
   border-radius: 14px;
   font-size: 0.85rem;
   line-height: 1.4;
+  margin: 0 auto; /* default center */
   word-wrap: break-word;
+  
 }
 
 .message.user {
   align-self: flex-end;
   background: linear-gradient(135deg, #6366f1, #06b6d4);
   color: #fff;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .message.ai {
@@ -2499,6 +2504,8 @@ main, section, .container, .wrapper {
   background: rgba(255,255,255,0.05);
   color: var(--light-text);
   border: 1px solid var(--glass-border);
+  margin-right: auto;
+  margin-left: 0;
 }
 
 /* Chat Input Area */
@@ -2565,6 +2572,7 @@ main, section, .container, .wrapper {
   .chatbot-container {
     width: 90vw;
     height: 400px;
+    
   }
 
   .chatbot-toggle {
@@ -2585,14 +2593,34 @@ main, section, .container, .wrapper {
 }
 
 @media (max-width: 400px) {
+  #chatbotSection {
+    position: fixed; 
+    bottom: 35px; /* stays at the bottom */ 
+    right: -38px; /* start from horizontal center */ 
+    transform: translateX(-50%); /* shift back by half width to truly center */ 
+    z-index: 10000; 
+    font-family: "DM Sans", sans-serif;
+  }
+  
   .chatbot-container {
     height: 350px;
+    width: 92vw;
+    max-width: 92vw;
+    height: 300px;
+    width: 250px;              /* minimized height */
+    border-radius: 14px;
+    
   }
+  .chat-messages {
+    align-items: center; /* centers messages horizontally */
+  }
+  
 
   .chatbot-toggle {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     font-size: 18px;
+    
   }
 
   .chat-input {
