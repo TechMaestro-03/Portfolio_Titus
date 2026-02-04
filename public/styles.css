@@ -507,9 +507,7 @@ header.scrolled {
   in srgb,
   var(--tech-stack-border) 30%,
   transparent
-);
-
-  
+); 
 
 }
 
@@ -517,8 +515,8 @@ header.scrolled {
   display: flex;
   gap: 30px;
   white-space: nowrap;
-  transform: translateX(0);
-  transition: transform 0.5s ease;
+  transform: translateY(-10px);
+  transition: transform 5s ease; /* slowed down movement */
 }
 
 .tech-stack-item {
@@ -537,10 +535,27 @@ header.scrolled {
   color: var(--accent);
   margin-top: 10px;
   border-radius: 20px;
+  transition: color 0.4s ease 0.5s; /* duration: 0.4s, delay: 0.1s */
   margin-bottom: 10px;
+  cursor: pointer;
   
 }
-
+/* Hover colors with cascading effect */
+.tech-stack-item i.fa-react:hover { color: #61dafb; transition-delay: 0s; }
+.tech-stack-item i.fa-node-js:hover { color: #68a063; transition-delay: 0.05s; }
+.tech-stack-item i.fa-python:hover { color: #3776ab; transition-delay: 0.1s; }
+.tech-stack-item i.fa-aws:hover { color: #ff9900; transition-delay: 0.15s; }
+.tech-stack-item i.fa-docker:hover { color: #2496ed; transition-delay: 0.2s; }
+.tech-stack-item i.fa-git-alt:hover { color: #f05032; transition-delay: 0.25s; }
+.tech-stack-item i.fa-js-square:hover { color: #f7df1e; transition-delay: 0.3s; }
+.tech-stack-item i.fa-html5:hover { color: #e34f26; transition-delay: 0.35s; }
+.tech-stack-item i.fa-css3-alt:hover { color: #1572b6; transition-delay: 0.4s; }
+.tech-stack-item i.fa-bootstrap:hover { color: #7952b3; transition-delay: 0.45s; }
+.tech-stack-item i.fa-java:hover { color: #e11f21; transition-delay: 0.5s; }
+.tech-stack-item i.fa-angular:hover { color: #dd0031; transition-delay: 0.55s; }
+.tech-stack-item i.fa-figma:hover { color: #f24e1e; transition-delay: 0.6s; }
+.tech-stack-item i.fa-linux:hover { color: #fcc624; transition-delay: 0.65s; }
+.tech-stack-item i.fa-fire:hover { color: #ffca28; transition-delay: 0.7s; } /* Firebase */
 
 .tech-stack-item span {
   font-size: 12px;
