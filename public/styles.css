@@ -2593,43 +2593,32 @@ main, section, .container, .wrapper {
 }
 
 @media (max-width: 400px) {
-  #chatbotSection {
-    position: fixed; 
-    bottom: 35px; /* stays at the bottom */ 
-    right: -38px; /* start from horizontal center */ 
-    transform: translateX(-50%); /* shift back by half width to truly center */ 
-    z-index: 10000; 
-    font-family: "DM Sans", sans-serif;
-  }
-  
+
   .chatbot-container {
-    height: 350px;
-    width: 92vw;
-    max-width: 92vw;
-    height: 300px;
-    width: 250px;              /* minimized height */
-    border-radius: 14px;
-    
+    position: fixed;
+    inset: 0;                 /* top:0 right:0 bottom:0 left:0 */
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+    transform: none;
+    display: flex;
+    z-index: 10001;
   }
+
+  .chatbot-header {
+    padding: 16px;
+    font-size: 1rem;
+  }
+
   .chat-messages {
-    align-items: center; /* centers messages horizontally */
-  }
-  
-
-  .chatbot-toggle {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
   }
 
-  .chat-input {
-    font-size: 0.85rem;
-    padding: 6px 10px;
-  }
-
-  .chat-send {
-    padding: 6px 10px;
-    font-size: 0.85rem;
+  .chat-form {
+    padding: 12px;
   }
 }

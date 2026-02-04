@@ -205,3 +205,12 @@ function getDynamicAIResponse(userMsg) {
 userInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") chatForm.dispatchEvent(new Event("submit"));
 });
+chatbotToggle.addEventListener("click", () => {
+  chatbot.style.display = "flex";
+  chatbotToggle.style.display = "none";
+});
+
+closeChat.addEventListener("click", () => {
+  chatbot.style.display = "none";
+  chatbotToggle.style.display = "flex";
+});
