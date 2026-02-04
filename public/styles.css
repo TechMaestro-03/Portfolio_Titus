@@ -1019,7 +1019,7 @@ section {
 }
 
 .project-content h3 {
-  font-size: 1.0rem;
+  font-size: 14px;
   font-weight: 500;
   color: var(--accent);
   margin-top: 3px;
@@ -1309,7 +1309,7 @@ h3{
 
 
 
-.service-card:hover {
+.service-card:hover:hover {
   transform: translateY(-10px);
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
@@ -1372,10 +1372,10 @@ h3{
 
 /* Title */
 .service-card h3 {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   color:white;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-bottom: 6px;
   position: relative;
   z-index: 2;
