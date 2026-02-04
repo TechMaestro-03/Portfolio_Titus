@@ -1036,6 +1036,7 @@ section {
   padding: 0px 0px;
   display: block;
   opacity: 0.85;
+  font-weight: 400;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -1305,12 +1306,15 @@ h3{
 
   box-shadow: 0 14px 32px rgba(0,0,0,0.09);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  inset: 0;
+  z-index: -1;
 }
 
 
 
+
 .service-card:hover:hover {
-  transform: translateY(-10px);
+  transform: scale(1.1);
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -1381,6 +1385,7 @@ h3{
   z-index: 2;
   margin: 0;
   transition: all 0.3s ease;
+  
 
   
 }
@@ -1390,6 +1395,7 @@ h3{
   font-size: 12px;
   color:white;
   line-height: 1.5;
+  font-weight: 300;
   max-width: 100%;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -1401,8 +1407,19 @@ h3{
   margin: 0;
   opacity: 0.7;
   transition: all 0.3s ease;
+}
+
+.service-card p:hover {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
 
 }
+
+.service-card h3:hover{
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+}
+
 
 @media screen and (max-width: 768px) {
   .skills-grid,
