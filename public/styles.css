@@ -2433,8 +2433,7 @@ main, section, .container, .wrapper {
 .chatbot-container {
   display: none; /* Hidden by default */
   flex-direction: column;
-  width: 100px;
-  padding-left: 140px;
+  width: 350px;
   max-width: 90vw;
   height: 500px;
   background: rgba(20, 20, 25, 0.95); /* Darker background for visibility */
