@@ -2392,10 +2392,17 @@ main, section, .container, .wrapper {
 #chatbotSection {
   position: fixed; 
   bottom: 35px; /* stays at the bottom */ 
-  right: -45px; /* start from horizontal center */ 
+  right: -35px; /* start from horizontal center */ 
   transform: translateX(-50%); /* shift back by half width to truly center */ 
   z-index: 10000; 
   font-family: "DM Sans", sans-serif;
+}
+/* === CHATBOT TOGGLE === */
+.chatbot-toggle-wrapper {
+  position: fixed;
+  right: 20px;
+  bottom: 90px; /* sits ABOVE quick info */
+  z-index: 10000;
 }
 
 /* Chatbot Toggle Button */
@@ -2426,7 +2433,8 @@ main, section, .container, .wrapper {
 .chatbot-container {
   display: none; /* Hidden by default */
   flex-direction: column;
-  width: 350px;
+  width: 100px;
+  padding-left: 140px;
   max-width: 90vw;
   height: 500px;
   background: rgba(20, 20, 25, 0.95); /* Darker background for visibility */
