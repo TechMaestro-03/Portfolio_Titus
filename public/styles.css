@@ -2707,8 +2707,6 @@ main, section, .container, .wrapper {
   font-style: italic;
 }
 
-
-
 /* =======================
    INPUT
 ======================= */
@@ -2726,16 +2724,17 @@ main, section, .container, .wrapper {
   border-radius: 12px;
   border: 1px solid var(--glass-border);
   background: rgba(255,255,255,0.05);
-  color: var(--light-text);
   outline: none;
+  color: var(--muted);
   transition: all 0.3s ease;
   min-height: 24px;
   max-height: 100px;
   resize: none;
 }
 .chat-input::placeholder {
-  color: var(--muted);
-  opacity: 0.7;
+  color: var(--light-text);
+
+  opacity: 1;
 }
 
 
