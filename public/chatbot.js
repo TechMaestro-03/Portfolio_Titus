@@ -29,18 +29,45 @@ document.addEventListener('DOMContentLoaded', () => {
       "Competitive Gaming (Strategy & FPS)",
       "Chess (Rated 1800+ on Chess.com)"
     ],
+
     education: Array.isArray(window.portfolioData.education) ? window.portfolioData.education : [
-      { degree: "BSc Computer Science", institution: "Maseno University", year: "Sep 2021 - Nov 2025", details: "Focused on algorithms, data structures, software engineering & AI." },
-      { degree: "PDTP Intern", institution: "ICT Authority", year: "Jan 2026 – Present", details: "Contributed to user-friendly digital solutions" },
-      { degree: "Freelance Developer", institution: "", year: "Jan 2022 – Present", details: "Designed and delivered modern digital solutions" }
+      { 
+        degree: "BSc Computer Science", 
+        institution: "Maseno University", 
+        year: "Sep 2021 - Nov 2025", 
+        details: "Focused on algorithms, data structures, software engineering & AI. Relevant coursework: Machine Learning, Database Systems, Computer Networks, Operating Systems. Capstone: ML-powered crop disease detection system using TensorFlow." 
+      },
+      { 
+        degree: "KCSE (Kenya Certificate of Secondary Education)", 
+        institution: "Kitondo High School", 
+        year: "2016 - 2020", 
+        details: "Key Subjects: Mathematics (A), Physics (B+), Chemistry (A-), Computer Studies (A). Extracurricular: Math Club President, Debate Team Captain, Founded Programming Club. Top 5% in County Examinations." 
+      },
+      { 
+        degree: "PDTP Intern", 
+        institution: "ICT Authority", 
+        year: "Jan 2026 – Present", 
+        details: "Contributed to user-friendly digital solutions with seamless functionality and consistent design standards for government portals. Technologies: React, Node.js, TypeScript, Figma." 
+      },
+      { 
+        degree: "Freelance Developer", 
+        institution: "", 
+        year: "Jan 2022 – Present", 
+        details: "Designed and delivered modern digital solutions with focus on usability and clean execution for 15+ clients across agriculture, education, and e-commerce sectors." 
+      }
     ],
+    
     certifications: Array.isArray(window.portfolioData.certifications) ? window.portfolioData.certifications : [
       "Google Data Analytics Professional Certificate (2024)",
       "Software Engineering Course - Moringa School (2024)"
     ],
     achievements: Array.isArray(window.portfolioData.achievements) ? window.portfolioData.achievements : [
       "Built and deployed 20+ projects with scalable architectures",
-      "3+ years of professional development experience"
+      "3+ years of professional development experience",
+      "Served 15+ clients with custom digital solutions",
+      "Winner of local hackathons in Kenya",
+      "Published technical articles on Medium",
+      "Top 5% in County KCSE Examinations (Kitondo High School)"
     ],
     languages: Array.isArray(window.portfolioData.languages) ? window.portfolioData.languages : [
       { name: "English", proficiency: "Fluent (Professional)" },
@@ -381,11 +408,29 @@ function getAIResponse(message, portfolioData, context) {
     
     // Separate academic vs professional entries using string.includes (NO REGEX)
     const academic = portfolioData.education.filter(e => 
-      (e.degree && (e.degree.includes('BSc') || e.degree.includes('Bachelor'))) || 
-      (e.institution && (e.institution.includes('University') || e.institution.includes('School')))
+      (e.degree && (
+        e.degree.includes('BSc') || 
+        e.degree.includes('Bachelor') || 
+        e.degree.includes('KCSE') || 
+        e.degree.includes('Certificate') || 
+        e.degree.includes('Diploma')
+      )) || 
+      (e.institution && (
+        e.institution.includes('University') || 
+        e.institution.includes('School') || 
+        e.institution.includes('College')
+      ))
     );
-    const professional = portfolioData.education.filter(e => !academic.includes(e));
-    
+    const professional = portfolioData.education.filter(e => 
+      !academic.includes(e) && 
+      (e.degree.includes('Intern') || 
+      e.degree.includes('Developer') || 
+      e.degree.includes('Attaché') || 
+      e.degree.includes('Trainer') ||
+      e.institution.includes('Authority') ||
+      e.institution.includes('Government'))
+    );
+        
     let response = `🎓 **Titus' Educational Foundation & Professional Development**\n\nTitus has built his expertise through strategic academic training combined with hands-on professional experience:\n\n`;
     
     if (academic.length) {
@@ -427,11 +472,11 @@ function getAIResponse(message, portfolioData, context) {
     
     // FIX: Handle nested contact.location structure
     const locationStr = portfolioData.contact?.location?.address || 
-                        portfolioData.contact?.location || 
-                        'Nairobi, Kenya';
-    
-    return `🌟 **${portfolioData.name}**\n${portfolioData.title}\n📍 ${locationStr}\n\n${portfolioData.bio}\n\n💡 **Professional Philosophy:**\nTitus believes technology should solve meaningful problems while respecting human dignity. His work blends cutting-edge technical skills with deep empathy for end-users—whether building government digital services for citizens or custom solutions for small businesses.\n\n🌱 **Growth Mindset:**\nFrom self-taught beginnings using free online resources to formal computer science education and professional certifications, Titus embodies continuous learning. He actively contributes to Kenya's tech ecosystem through hackathons, technical writing, and community mentorship.\n\n${getContactResponse(portfolioData)}`;
-  }
+    portfolioData.contact?.location?.city || 
+    portfolioData.contact?.location || 
+    'Nairobi, Kenya';
+        return `🌟 **${portfolioData.name}**\n${portfolioData.title}\n📍 ${locationStr}\n\n${portfolioData.bio}\n\n💡 **Professional Philosophy:**\nTitus believes technology should solve meaningful problems while respecting human dignity. His work blends cutting-edge technical skills with deep empathy for end-users—whether building government digital services for citizens or custom solutions for small businesses.\n\n🌱 **Growth Mindset:**\nFrom self-taught beginnings using free online resources to formal computer science education and professional certifications, Titus embodies continuous learning. He actively contributes to Kenya's tech ecosystem through hackathons, technical writing, and community mentorship.\n\n${getContactResponse(portfolioData)}`;
+      }
   
   // Services - FULLY DETAILED WITH VALUE PROPOSITION
   if (msg.includes('service') || msg.includes('offer') || msg.includes('provide') || msg.includes('what do you do') || msg.includes('specialize')) {
