@@ -2733,7 +2733,6 @@ main, section, .container, .wrapper {
 }
 .chat-input::placeholder {
   color: var(--light-text);
-
   opacity: 1;
 }
 
