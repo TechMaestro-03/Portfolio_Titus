@@ -2725,7 +2725,7 @@ main, section, .container, .wrapper {
   border: 1px solid var(--glass-border);
   background: rgba(255,255,255,0.05);
   outline: none;
-  color: var(--muted);
+  color: var(--light-text);
   transition: all 0.3s ease;
   min-height: 24px;
   max-height: 100px;
