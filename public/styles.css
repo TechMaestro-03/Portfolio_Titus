@@ -1283,6 +1283,7 @@ h3{
   text-align: center;
   line-height: 1.4;
 }
+
 /* =======================
    Services Card
 ======================= */
@@ -1292,14 +1293,13 @@ h3{
   position: relative;
   padding: 22px 24px;
   display: flex;
-  gap:5px;
+  gap: 5px;
   flex-direction: column;
   align-items: flex-start;
   border-radius: 20px;
   text-align: left;
   overflow: hidden;
 
-  /* TOP white / BOTTOM accent */
   background: linear-gradient(
     180deg,
     #ffffff 0%,
@@ -1308,13 +1308,19 @@ h3{
     var(--accent, #2563eb) 100%
   );
 
-  box-shadow: 0 14px 32px rgba(0,0,0,0.09);
+  /* Softer blurred outer border */
+  box-shadow:
+  0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent),
+  0 0 18px rgba(37, 99, 235, 0.18);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  inset: 0;
-  z-index: -1;
 }
 
-
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 0 24px rgba(37, 99, 235, 0.28); /* softer hover glow */
+}
 
 
 .service-card:hover:hover {
