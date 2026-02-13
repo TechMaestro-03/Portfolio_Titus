@@ -1372,7 +1372,7 @@ h3{
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   z-index: 3;
 }
 
@@ -1387,10 +1387,10 @@ h3{
 /* Title */
 .service-card h3 {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   color:white;
-  margin-top: 10px;
-  margin-bottom: 6px;
+  margin-top: 20px;
+  margin-bottom: 5px;
   position: relative;
   z-index: 2;
   margin: 0;
