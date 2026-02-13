@@ -1797,7 +1797,7 @@ h3{
 /* Speech arrow */
 .quote-arrow {
   position: absolute;
-  bottom: -21.5px;
+  bottom: -21px;
   left: 36px;
   width: 0;
   height: 0;
