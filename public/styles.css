@@ -245,7 +245,7 @@ header.scrolled {
 
 .resume-btn {
   padding: 8px 12px;
-  color: inherit;
+  color: var(--accent);
   font-family: "DM Sans", sans-serif;;
   margin: 10px;
   text-decoration: none;
@@ -1762,8 +1762,8 @@ h3{
 ======================= */
 .testimonial-quote {
   position: relative;
-  background: #fafafa;
-  color: #333;
+  background: var(--card);
+  color: var(--text);
   border-radius: 14px;
   padding: 28px 30px;
   font-size: 0.85rem;
@@ -1797,13 +1797,13 @@ h3{
 /* Speech arrow */
 .quote-arrow {
   position: absolute;
-  bottom: -18px;
+  bottom: -22px;
   left: 36px;
   width: 0;
   height: 0;
   border-left: 0 solid transparent;
   border-right: 22px solid transparent;
-  border-top: 22px solid #fafafa;
+  border-top: 22px solid var(--card);
 }
 
 /* =======================
@@ -2032,6 +2032,10 @@ h3{
 .form-group label {
   font-size: 0.92rem;
 }
+.form-control::placeholder{
+  color:var(--light-text) ;
+
+}
 
 .form-control {
   width: 100%;
@@ -2042,6 +2046,8 @@ h3{
   border: 1px solid rgba(55, 35, 146, 0.18);
   border-radius: 12px;
   outline: none;
+  background: var(--card);
+  color:var(--light-text) ;
   transition: 0.25s;
 }
 
