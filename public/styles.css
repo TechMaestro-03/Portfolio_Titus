@@ -1969,7 +1969,7 @@ footer {
     .hero-name {
       text-align: left;
       font-size: clamp(2rem, 7vw, 2.4rem);
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       padding-left: 3px;
 
     }
@@ -1994,7 +1994,7 @@ footer {
       max-width: 420px;
       margin: auto;
       padding-left: 5px;
-      margin-bottom: 16px;
+      margin-bottom: 30px;
     }
   
   
@@ -2018,7 +2018,7 @@ footer {
   
     .hero-socials {
       justify-content: flex-start;
-      margin-top: 8px;
+      margin-top: 5px;
       margin-bottom: -100px;
     }
   
