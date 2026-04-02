@@ -731,7 +731,7 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
 .chatbot-toggle:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(79,142,255,0.55); animation-play-state: paused; }
 .chatbot-toggle svg, .chatbot-toggle i { display: block; margin: 0 auto; pointer-events: none; }
 @keyframes floatBtn { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-#chatbotSection { position: fixed; right: 24px; bottom: 150px; z-index: 9999; }
+#chatbotSection { position: fixed; right: 20px; bottom: 100px; z-index: 9999; }
 .chatbot-container { display: none; flex-direction: column; width: 360px; height: 500px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,0.55); }
 .chatbot-header { padding: 16px 18px; background: var(--grad-accent); display: flex; align-items: center; justify-content: space-between; color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
 .chatbot-close { background: transparent; border: none; color: rgba(255,255,255,0.78); cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; transition: color var(--dur), background var(--dur); }
