@@ -63,7 +63,7 @@
   --font-display: 'Outfit', 'Syne', sans-serif;
   --font-body:    'Figtree', 'DM Sans', sans-serif;
   --font-mono:    'Fira Code', 'JetBrains Mono', monospace;
-  --font-logo:    'Playfair Display', Georgia, serif;
+  --font-logo:     "Faster One", system-ui;
 }
 
 /* === LIGHT THEME === */
@@ -331,7 +331,7 @@ section { padding: var(--section-pad); position: relative; z-index: 1; }
    HERO — dot/line background (preserved exactly)
 ================================================ */
 #home {
-  min-height: 100svh;
+  min-height: 70svh;
   display: flex; align-items: center;
   padding: 0 24px; overflow: hidden; position: relative;
   background:
@@ -832,7 +832,7 @@ footer { background: var(--bg-secondary); border-top: 1px solid var(--border); p
     flex-direction: column;
     gap: 0;
     padding-top: 28px;
-    padding-bottom: 36px;
+    padding-bottom: 16px;
     text-align: left;
     max-width: 100%;
     width: 100%;
